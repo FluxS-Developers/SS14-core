@@ -1,0 +1,38 @@
+<Document>
+# Химикаты
+
+Химикаты — это мощный инструмент, который может вызывать различные эффекты при употреблении. Некоторые из них можно найти в растениях, купить в карго или синтезировать путем сочетания с другими химикатами.
+
+Знание различных типов химикатов и их эффектов важно для того, чтобы уметь контролировать травмы и опасности.
+
+## Элементы
+<GuideReagentGroupEmbed Group="Elements"/>
+
+## Медикаменты
+<GuideReagentGroupEmbed Group="Medicine"/>
+
+## Наркотики
+<GuideReagentGroupEmbed Group="Narcotics"/>
+
+## Пиротехника
+<GuideReagentGroupEmbed Group="Pyrotechnic"/>
+
+## Токсины
+<GuideReagentGroupEmbed Group="Toxins"/>
+
+## Еда
+<GuideReagentGroupEmbed Group="Foods"/>
+
+## Ботанические
+<GuideReagentGroupEmbed Group="Botanical"/>
+
+## Биологические
+<GuideReagentGroupEmbed Group="Biological"/>
+
+## Уборка
+<GuideReagentGroupEmbed Group="Cleaning"/>
+
+## Прочее
+<GuideReagentGroupEmbed Group="Unknown"/>
+
+</Document>

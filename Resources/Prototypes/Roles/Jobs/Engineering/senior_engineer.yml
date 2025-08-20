@@ -1,0 +1,35 @@
+- type: job
+  id: SeniorEngineer
+  name: job-name-senior-engineer
+  description: job-description-senior-engineer
+  playTimeTracker: JobSeniorEngineer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobAtmosphericTechnician
+      time: 21600 #6 hrs
+    - !type:RoleTimeRequirement
+      role: JobStationEngineer
+      time: 21600 #6 hrs
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 216000 # 60 hrs
+  icon: "JobIconSeniorEngineer"
+  supervisors: job-supervisors-ce
+  canBeAntag: false
+  special:
+    - !type:AddImplantSpecial
+      implants: [ MindShieldImplant ]
+  access:
+  - Maintenance
+  - Engineering
+  - External
+  - Atmospherics
+
+- type: startingGear
+  id: SeniorEngineerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSeniorEngineer
+    back: ClothingBackpackEngineeringFilled
+    shoes: ClothingShoesBootsMag
+    id: SeniorEngineerPDA
+    ears: ClothingHeadsetEngineering

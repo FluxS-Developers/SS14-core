@@ -1,0 +1,51 @@
+# Best job.
+
+- type: job
+  id: ChiefMedicalOfficer
+  name: job-name-cmo
+  description: job-description-cmo
+  playTimeTracker: JobChiefMedicalOfficer
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 18000
+    - !type:OverallPlaytimeRequirement
+      time: 108000
+    - !type:AgeRequirement
+      requiredAge: 20
+    - !type:SpeciesRequirement
+      species:
+      - Human
+      - Felinid
+      - Moth
+  weight: 10
+  icon: "JobIconChiefMedicalOfficer"
+  arrivalNotificationPrototype: ChiefMedicalOfficerArrivalNotification
+  requireAdminNotify: true
+  supervisors: job-supervisors-captain
+  whitelistedSpecies:
+    - Human
+    - Felinid
+    - Moth
+  canBeAntag: true
+  access:
+  - Medical
+  - Command
+  - Maintenance
+  - Chemistry
+  - ChiefMedicalOfficer
+  - Brig
+  - Cryogenics
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: CMOGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCMO
+    back: ClothingBackpackCMOFilled
+    shoes: ClothingShoesColorBrown
+    id: CMOPDA
+    ears: ClothingHeadsetAltMedical

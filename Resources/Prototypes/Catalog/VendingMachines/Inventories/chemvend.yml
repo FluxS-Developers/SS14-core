@@ -1,0 +1,61 @@
+- type: vendingMachineInventory
+  id: ChemVendInventory
+  startingInventory:
+    Jug: 8
+    ChemicalCartridge: 2
+    ChemicalCartridgeAluminium: 1
+    ChemicalCartridgeCarbon: 1
+    ChemicalCartridgeChlorine: 1
+    ChemicalCartridgeCopper: 1
+    ChemicalCartridgeEthanol: 1
+    ChemicalCartridgeFluorine: 1
+    ChemicalCartridgeHydrogen: 1
+    ChemicalCartridgeIodine: 1
+    ChemicalCartridgeIron: 1
+    ChemicalCartridgeLithium: 1
+    ChemicalCartridgeMercury: 1
+    ChemicalCartridgeNitrogen: 1
+    ChemicalCartridgeOxygen: 1
+    ChemicalCartridgePhosphorus: 1
+    ChemicalCartridgePotassium: 1
+    ChemicalCartridgeRadium: 1
+    ChemicalCartridgeSilicon: 1
+    ChemicalCartridgeSodium: 1
+    ChemicalCartridgeSugar: 1
+    ChemicalCartridgeSulfur: 1
+  emaggedInventory:
+    VestineChemistryVial: 1
+    ToxinChemistryBottle: 1
+    ChemicalCartridgeNapalm: 1
+
+- type: vendingMachineInventory
+  id: ChemVendInventorySyndicate
+  startingInventory:
+    Jug: 4
+    JugAluminium: 2
+    JugCarbon: 4
+    JugChlorine: 1
+    JugCopper: 2
+    JugEthanol: 2
+    JugFluorine: 1
+    JugHydrogen: 3
+    JugIodine: 1
+    JugIron: 2
+    JugLithium: 2
+    JugMercury: 1
+    JugNitrogen: 3
+    JugOxygen: 3
+    JugPhosphorus: 1
+    JugPotassium: 2
+    JugRadium: 1
+    JugSilicon: 2
+    JugSodium: 2
+    JugSugar: 3
+    JugSulfur: 1
+    JugWeldingFuel: 1
+  emaggedInventory:
+    PaxChemistryBottle: 3
+    MuteToxinChemistryBottle: 3
+    LeadChemistryBottle: 2
+    ToxinChemistryBottle: 1
+

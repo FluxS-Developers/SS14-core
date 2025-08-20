@@ -1,0 +1,171 @@
+- type: entity
+  id: ActionCultTwistedConstruction
+  name: Twisted Construction
+  description: A sinister spell that is used to turn metal into runic metal.
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      canTargetSelf: false
+      icon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: transmute
+      event: !type:CultTwistedConstructionActionEvent
+        speech: "Ethra p'ni dedol!"
+      itemIconStyle: BigAction
+      charges: 1
+      temporary: true
+      removeOnNoCharges: true
+
+- type: entity
+  id: ActionCultTeleport
+  name: Teleport
+  description: A useful spell that teleports cultists to a chosen destination.
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      whitelist:
+        components:
+          - HumanoidAppearance
+          - Cultist
+      canTargetSelf: true
+      icon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: teleport
+      event: !type:CultTeleportTargetActionEvent
+        speech: "Sas'so c'arta forbici!"
+      itemIconStyle: BigAction
+      charges: 1
+      temporary: true
+      removeOnNoCharges: true
+
+- type: entity
+  id: ActionCultSummonCombatEquipment
+  name: Summon combat equipment
+  description: A crucial spell that enables you to summon a full set of combat gear.
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      whitelist:
+        components:
+          - HumanoidAppearance
+          - Cultist
+      canTargetSelf: true
+      icon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: armor
+      event: !type:CultSummonCombatEquipmentTargetActionEvent
+      itemIconStyle: BigAction
+      charges: 1
+      temporary: true
+      removeOnNoCharges: true
+
+- type: entity
+  id: InstantActionCultStun
+  name: Stun
+  description: A potent spell that will stun and mute victims.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      icon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: stun
+      event: !type:CultStunActionEvent
+      itemIconStyle: BigAction
+      charges: 1
+      temporary: true
+      removeOnNoCharges: true
+
+- type: entity
+  id: ActionCultShadowShackles
+  name: Shadow Shackles
+  description: A stealthy spell that will summon shadowy handcuffs on a person, and temporarily silence your victim for 10 seconds.
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      whitelist:
+        components:
+          - HumanoidAppearance
+      canTargetSelf: false
+      icon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: shackles
+      event: !type:CultShadowShacklesTargetActionEvent
+        speech: "In'totum Lig'abis!"
+      itemIconStyle: BigAction
+      charges: 4
+      temporary: true
+      removeOnNoCharges: true
+
+- type: entity
+  id: InstantActionSummonCultDagger
+  name: Summon cult dagger
+  description: Summons a ritual dagger.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      icon:
+        sprite: /Textures/White/Cult/interface.rsi
+        state: icon
+      event: !type:CultSummonDaggerActionEvent
+        speech: "Wur d'dai leev'mai k'sagan!"
+      charges: 1
+      temporary: true
+      removeOnNoCharges: true
+
+- type: entity
+  id: InstantActionBloodRites
+  name: Blood Rites
+  description: Sucks blood and heals you.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      icon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: blood_rites
+      event: !type:CultBloodRitesInstantActionEvent
+      charges: 5
+      temporary: true
+      removeOnNoCharges: true
+
+- type: entity
+  id: InstantActionEmpPulse
+  name: Electromagnetic Pulse
+  description: A large spell that allows a user to channel dark energy into an EMP.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      icon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: emp
+      event: !type:CultElectromagneticPulseInstantActionEvent
+        speech: "Ta'gh fara'qha fel d'amar det!"
+      charges: 1
+      temporary: true
+      removeOnNoCharges: true
+
+- type: entity
+  id: InstantActionConcealPresence
+  name: Conceal Presence
+  description: A multi-function spell that alternates between hiding and revealing nearby runes and cult structures.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      icon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: gone
+      event: !type:CultConcealInstantActionEvent
+        speech: "Kla'atu barada nikt'o!"
+      charges: 10
+      temporary: true
+      removeOnNoCharges: true
+    - type: ConcealPresenceSpell
+      concealEvent: !type:CultConcealInstantActionEvent
+        speech: "Kla'atu barada nikt'o!"
+      revealEvent: !type:CultRevealInstantActionEvent
+        speech: "Kla'atu barada nikt'o!"
+      concealIcon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: gone
+      revealIcon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: back

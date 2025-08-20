@@ -1,0 +1,46 @@
+﻿# Job trinkets
+
+- type: itemLoadout # WD
+  id: FolderBlack
+  equipment: FolderBlack
+- type: startingGear
+  id: FolderBlack
+  storage:
+    back:
+    - BoxFolderBlack
+
+- type: itemLoadout # WD
+  id: FolderWhite
+  equipment: FolderWhite
+- type: startingGear
+  id: FolderWhite
+  storage:
+    back:
+    - BoxFolderWhite
+
+- type: itemLoadout # WD
+  id: FolderRed
+  equipment: FolderRed
+- type: startingGear
+  id: FolderRed
+  storage:
+    back:
+    - BoxFolderRed
+
+- type: itemLoadout # WD
+  id: Clipboard
+  equipment: Clipboard
+- type: startingGear
+  id: Clipboard
+  storage:
+    back:
+    - BoxFolderClipboard
+
+- type: itemLoadout # WD
+  id: JudgeHammer
+  equipment: JudgeHammer
+- type: startingGear
+  id: JudgeHammer
+  storage:
+    back:
+    - JudgeHammer

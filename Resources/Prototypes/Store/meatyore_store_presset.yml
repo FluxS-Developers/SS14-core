@@ -1,0 +1,37 @@
+﻿- type: storePreset
+  id: StorePresetMeatyOre
+  storeName: MeatyOreStore
+  categories:
+    - MeatyOreHats
+    - MeatyOreMasks
+    - MeatyOreBoots
+    - MeatyOreGlasses
+    - MeatyOrePersonal
+    - MeatyOreSuits
+    - MeatyOreUniforms
+    - MeatyOreGloves
+    - MeatyOreCloaks
+    - MeatyOreToys
+    - MeatyOreMisc
+    - MeatyOreCapes
+    - MeatyOreNew
+    - MeatyOreAntag
+    - DjJukeboxCategory
+  currencyWhitelist:
+    - MeatyOreCoin
+
+# This is unused now
+- type: entity
+  id: StoreMeatyOreEntity
+  name: ThisIsDumb
+  noSpawn: true
+  components:
+    - type: Store
+      preset: StorePresetMeatyOre
+      balance:
+        MeatyOreCoin: 0
+    - type: UserInterface
+      interfaces:
+        enum.StoreUiKey.Key:
+          type: StoreBoundUserInterface
+    - type: IgnorBUIInteractionRange

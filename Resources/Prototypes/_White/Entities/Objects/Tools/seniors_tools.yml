@@ -1,0 +1,153 @@
+- type: entity
+  parent: Crowbar
+  id: ImprovedCrowbar # OK
+  name: improved crowbar
+  components:
+    - type: StaticPrice
+      price: 1000
+    - type: Tool
+      speed: 2
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 12
+          Structural: 7
+    - type: Sprite
+      sprite: White/Objects/Tools/impcrowbar.rsi
+    - type: Item
+      sprite: White/Objects/Tools/impcrowbar.rsi
+      size: Small
+      storedSprite: null
+      storedRotation: -63
+
+- type: entity
+  parent: Wrench
+  id: ImprovedWrench # OK
+  name: improved wrench
+  components:
+    - type: StaticPrice
+      price: 500
+    - type: Tool
+      speed: 2
+    - type: Sprite
+      sprite: White/Objects/Tools/impwrench.rsi
+    - type: Item
+      sprite: White/Objects/Tools/impwrench.rsi
+      size: Small
+      storedSprite: null
+      storedRotation: -44
+    - type: MeleeWeapon
+      attackRate: 1.5
+      damage:
+        types:
+          Blunt: 9
+
+- type: entity
+  parent: BaseItem
+  id: ImprovedScrewdriver
+  name: improved screwdriver
+  description: "Industrial grade torque in a small screwdriving package."
+  components:
+    - type: StaticPrice
+      price: 500
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Items/screwdriver_drop.ogg
+    - type: Tag
+      tags:
+        - Screwdriver
+    - type: Sprite
+      sprite: White/Objects/Tools/impscrewdriver.rsi
+      state: icon
+    - type: Item
+      sprite: White/Objects/Tools/impscrewdriver.rsi
+      storedRotation: -90
+    - type: UseDelay
+    - type: MeleeWeapon
+      attackRate: 1
+      damage:
+        types:
+          Piercing: 7
+      soundHit:
+        path: "/Audio/Weapons/bladeslice.ogg"
+    - type: Tool
+      speed: 2
+      qualities:
+        - Screwing
+      useSound:
+        collection: Screwdriver
+    - type: PhysicalComposition
+      materialComposition:
+        Steel: 100
+    - type: EmitSoundOnPickup
+      sound:
+        path: /Audio/White/Items/handling/screwdriver_pickup.ogg
+    - type: EmitSoundOnDrop
+      sound:
+        path: /Audio/Items/screwdriver_drop.ogg
+
+- type: entity
+  parent: BaseItem
+  id: ImprovedWirecutter
+  name: improved wirecutter
+  description: This kills the wire.
+  components:
+    - type: StaticPrice
+      price: 500
+    - type: Item
+      sprite: White/Objects/Tools/impwirecutter.rsi
+      storedRotation: -90
+    - type: Sprite
+      sprite: White/Objects/Tools/impwirecutter.rsi
+      state: icon
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Items/wirecutter_drop.ogg
+    - type: Tag
+      tags:
+        - PlantSampleTaker
+        - Wirecutter
+    - type: UseDelay
+    - type: MeleeWeapon
+      damage:
+        types:
+          Piercing: 5
+      attackRate: 2 #open and close that shit on their arm like hell! because you sure aren't doing any damage with this
+      soundHit:
+        path: "/Audio/Items/wirecutter.ogg"
+    - type: Tool
+      speed: 2
+      qualities:
+        - Cutting
+      useSound:
+        path: /Audio/Items/wirecutter.ogg
+    - type: PhysicalComposition
+      materialComposition:
+        Steel: 100
+    - type: EmitSoundOnPickup
+      sound:
+        path: /Audio/White/Items/handling/wirecutter_pickup.ogg
+    - type: EmitSoundOnDrop
+      sound:
+        path: /Audio/Items/wirecutter_drop.ogg
+
+- type: entity
+  parent: BaseWelder
+  id: ImprovedWelder
+  name: improved welder
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        Welder:
+          reagents:
+            - ReagentId: WeldingFuel
+              Quantity: 300
+          maxVol: 300
+    - type: Sprite
+      sprite: White/Objects/Tools/impwelder.rsi
+    - type: Item
+      sprite: White/Objects/Tools/impwelder.rsi
+    - type: StaticPrice
+      price: 700
+    - type: Tool
+      speed: 1.5

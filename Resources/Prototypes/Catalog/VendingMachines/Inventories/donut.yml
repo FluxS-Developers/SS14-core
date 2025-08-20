@@ -1,0 +1,19 @@
+- type: vendingMachineInventory
+  id: DonutInventory
+  startingInventory:
+    #WD edit start
+    FoodDonutPlain: 3
+    FoodDonutPink: 2
+    FoodDonutChocolate: 2
+    FoodDonutCaramel: 2
+    FoodDonutApple: 2
+    FoodDonutBlumpkin: 2
+    FoodDonutMeat: 2
+    FoodDonutSpaceman: 2
+    FoodDonutBungo: 2
+    FoodDonutJellySlugcat: 1
+  emaggedInventory:
+    FoodDonutPoison: 3
+  contrabandInventory:
+    FoodDonutHomer: 2
+  #WD edit end

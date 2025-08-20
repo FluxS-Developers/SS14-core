@@ -1,0 +1,14 @@
+name: No submodule update checker
+
+on:
+  pull_request:
+    paths:
+      - 'RobustToolbox'
+
+jobs:
+  this_aint_right:
+    name: Submodule update in pr found
+    runs-on: self-hosted
+    steps:
+      - name: Fail
+        run: exit 1

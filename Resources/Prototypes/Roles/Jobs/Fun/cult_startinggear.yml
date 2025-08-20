@@ -1,0 +1,15 @@
+#Cult outfit startingGear definitions.
+
+# - type: startingGear
+#   id: CultLeaderGear
+
+- type: startingGear
+  id: CultistGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBlack
+    back: ClothingBackpackFilled
+    head: ClothingHeadHatHoodCulthood
+    outerClothing: ClothingOuterRobesCult
+    shoes: ClothingShoesColorRed
+    id: PassengerPDA
+    ears: ClothingHeadsetService

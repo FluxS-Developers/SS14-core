@@ -1,0 +1,377 @@
+- type: entity
+  id: RandomAccentAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Акценты вне контроля
+      sender: Федерация Космических Волшебников
+      description: Всегда интересно, какой акцент вы услышите следующим.
+      weight: 3
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: RandomAccentAspect
+
+- type: entity
+  id: FastAndFuriousAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Fast and Furious
+      description: Новейшие разработки в области фильтрации питьевой воды привели к непредвиденным результатам. КПД двигательных систем большинства органических и неорганических существ возрос на 60%!
+      weight: 3
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: FastAndFuriousAspect
+
+# Not funny
+# - type: entity
+#   id: RandomAppearanceAspect
+#   parent: BaseGameRule
+#   noSpawn: true
+#   components:
+#     - type: Aspect
+#       name: Random appearance
+#       description: Экипаж перестал узнавать друг-друга в лицо
+#       weight: 3
+#       startAudio:
+#         path: /Audio/White/Aspects/accent.ogg
+#     - type: RandomAppearanceAspect
+
+- type: entity
+  id: BombassAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Bombass
+      description: Кто-то заложил мины на станции!
+      weight: 2
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: BombassAspect
+
+- type: entity
+  id: DrunkAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Drunk
+      description: На станции стоит явный запах вчерашнего веселья... и кажется оно только начинается.
+      weight: 3
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: DrunkAspect
+
+- type: entity
+  id: CargoRichAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Cargo Rich
+      description: Карго работало усердно в прошлую смену, за что они и были награждены премией в размере 100000 кредитов.
+      weight: 2
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: CargoRichAspect
+
+- type: entity
+  id: TraitoredAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Traitored
+      description: Кто-то сдал всех предателей!
+      requires: Traitors
+      weight: 1
+      isHidden: true
+    - type: TraitoredAspect
+
+- type: entity
+  id: WeakWallsAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Weak Walls
+      description: В связи с невыполнением экономических показателей за предыдущий финансовый период - было принято решение на экономии строительных материалов для стен.
+      weight: 2
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: WeakWallsAspect
+
+- type: entity
+  id: NoEngineAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: No engine
+      description: Какой-то смышлённый агент синдиката решил украсть все ваши генераторы энергии целиком.
+      weight: 2
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: NoEngineAspect
+
+- type: entity
+  id: AiRunLockAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Airunlock
+      sender: Федерация Космических Волшебников
+      description: Кого волнует безопасность? Экипаж свободно может ходить по всем отсекам, ведь все шлюзы теперь для них доступны.
+      weight: 2
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+      isForbidden: true
+    - type: AiRunLockAspect
+
+- type: entity
+  id: BloodyAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Bloody
+      sender: Федерация Космических Волшебников
+      description: В эту смену любая незначительная травма может оказаться летальной.
+      weight: 2
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: BloodyAspect
+
+- type: entity
+  id: WeakAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Weak
+      sender: Федерация Космических Волшебников
+      description: Удары стали слабее. Пули мягче. К чему это приведёт?
+      weight: 1
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: WeakAspect
+
+- type: entity
+  id: BattledAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Battled
+      description: Люди очень насторожены и готовы дать отпор в любую секунду.
+      weight: 1
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: BattledAspect
+
+- type: entity
+  id: ChairLeakAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: I Have Two Butts But I must Seat
+      description: Стулья украли!
+      weight: 3
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: ChairLeakAspect
+
+- type: entity
+  id: PresentAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Presents
+      sender: Федерация Космических Волшебников
+      description: А вы верите в Деда Мороза?
+      weight: 3
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: PresentAspect
+
+- type: entity
+  id: DancingAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Dance
+      sender: Федерация Космических Волшебников
+      description: Танцуют все!
+      weight: 3
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: DancingAspect
+
+- type: entity
+  id: ReflectAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Reflect
+      sender: Федерация Космических Волшебников
+      description: Ваше отражение повсюду.
+      weight: 2
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: ReflectAspect
+
+- type: entity
+  id: SlipperyAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Slippery
+      sender: Федерация Космических Волшебников
+      description: Постарайтесь не подскальзываться!
+      weight: 2
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: SlipperyAspect
+
+- type: entity
+  id: TraitorRichAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Extra TC
+      description: Синдикат выделил 10 дополнительных телекристаллов для предателей.
+      requires: Traitors
+      weight: 3
+      isHidden: true
+    - type: TraitorRichAspect
+
+- type: entity
+  id: WhisperAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Whisper
+      sender: Федерация Космических Волшебников
+      description: Вы слишком шумные, мы запрещаем вам повышать голос!
+      weight: 3
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+      isForbidden: true
+    - type: WhisperAspect
+
+- type: entity
+  id: DarknessAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Darkness
+      sender: Федерация Космических Волшебников
+      description: Почему все так темно?
+      weight: 2
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: DarknessAspect
+
+- type: entity
+  id: StolenFloorAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Stolen Floor
+      description: Рабочие забыли положить плитку при строительстве станции.
+      weight: 3
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: StolenFloorAspect
+
+- type: entity
+  id: WindowLeakAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Are We In Dungeon
+      description: В связи с невероятной хрупкостью окон было решено заменить их на стены.
+      weight: 3
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: WindowLeakAspect
+
+- type: entity
+  id: CatEarsAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Cat Ears And Tail
+      description: Из-за ошибки в системе клонирования на ЦК все члены экипажа стали походить на фелинидов.
+      weight: 3
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: CatEarsAspect
+
+- type: entity
+  id: NothingAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Nothing
+      description: Ничего
+      weight: 3
+      isForbidden: true
+      isHidden: true
+    - type: NothingAspect
+
+- type: entity
+  id: RandomItemAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: Aspect
+      name: Random item
+      description: ЦК выдало каждому члену экипажа определённый предмет.
+      weight: 3
+      startAudio:
+        path: /Audio/White/Aspects/accent.ogg
+    - type: RandomItemAspect
+
+- type: entity
+  id: ImmersiveAspect
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: Aspect
+    name: Immersive
+    description: В связи с недавними трагичными событиями экипаж станции погрузился в себя.
+    weight: 3
+    startAudio:
+      path: /Audio/White/Aspects/accent.ogg
+  - type: ImmersiveAspect
+
+# Disabled this cause polymorph breaks stuff
+#- type: entity
+#  id: SkeletonAspect
+#  parent: BaseGameRule
+#  noSpawn: true
+#  components:
+#    - type: Aspect
+#      name: Skeletons
+#      description: АЧК АЧК!
+#      weight: 1
+#      startAudio:
+#        path: /Audio/White/Aspects/accent.ogg
+#    - type: SkeletonAspect

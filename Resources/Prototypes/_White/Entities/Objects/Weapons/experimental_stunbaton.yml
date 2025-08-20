@@ -1,0 +1,16 @@
+- type: entity
+  parent: Stunbaton
+  id: ExperimentalStunbaton
+  name: experimental stun baton
+  description: Meowk!
+  components:
+  - type: Clothing
+    sprite: White/Objects/Weapons/experimental_stunbaton.rsi
+  - type: Sprite
+    sprite: White/Objects/Weapons/experimental_stunbaton.rsi
+  - type: Stunbaton
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
+  - type: StaticPrice
+    price: 1000

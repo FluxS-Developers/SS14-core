@@ -1,0 +1,25 @@
+<Control xmlns="https://spacestation14.io"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:mainMenu="clr-namespace:Content.Client.MainMenu">
+    <mainMenu:BackgroundControl TexturePath="/Textures/Logo/logo-ru.png" Stretch="KeepAspectCentered" Name="Background"/>
+    <Control HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+        <PanelContainer StyleClasses="LobbyShadedBackground" HorizontalAlignment="Right">
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True" HorizontalAlignment="Right">
+                <Button Name="QuitButton" Text="{Loc 'queue-quit'}"
+                        HorizontalAlignment="Right" HorizontalExpand="True" />
+                <Button Name="PriorityJoinButton" Text="{Loc 'queue-priority-join'}"
+                        HorizontalAlignment="Right" HorizontalExpand="True" />
+            </BoxContainer>
+        </PanelContainer>
+        <PanelContainer MinWidth="900" StyleClasses="LobbyShadedBackground" HorizontalAlignment="Center">
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True" HorizontalAlignment="Center" Margin="4 4 4 0">
+                <BoxContainer Orientation="Horizontal" VerticalExpand="True">
+                    <Label Text="{Loc 'queue-position'}" Align="Center" StyleClasses="LabelHeadingFuckingBigger" Margin="0 0 24 0" />
+                    <Label Name="QueuePosition" StyleClasses="LabelHeadingFuckingBigger" Align="Center" Margin="0 0 24 0" />
+                    <Label Text="{Loc 'queue-of'}" Align="Center" StyleClasses="LabelHeadingFuckingBigger" Margin="0 0 24 0" />
+                    <Label Name="QueueTotal" StyleClasses="LabelHeadingFuckingBigger" Align="Center" />
+                </BoxContainer>
+            </BoxContainer>
+        </PanelContainer>
+    </Control>
+</Control>

@@ -1,0 +1,10 @@
+- type: species
+  id: Dwarf
+  name: species-name-dwarf
+  roundStart: true
+  prototype: MobDwarf
+  bodyTypes:
+  - HumanNormal
+  markingLimits: MobHumanMarkingLimits
+  dollPrototype: MobDwarfDummy
+  skinColoration: HumanToned

@@ -1,0 +1,338 @@
+- type: entity
+  id: ActionChangelingShop
+  name: Shop
+  description: Abilities shop.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      itemIconStyle: NoItem
+      icon: Interface/Actions/shop.png
+      event: !type:ChangelingShopActionEvent
+    - type: LesserFormRestricted
+
+- type: entity
+  id: ActionChangelingAbsorb
+  name: Absorb
+  description: Absorbs the human.
+  noSpawn: true
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon:
+        sprite: White/Actions/changeling.rsi
+        state: absorb
+    event: !type:AbsorbDnaActionEvent
+    canTargetSelf: false
+    useDelay: 1
+  - type: LesserFormRestricted
+
+- type: entity
+  id: ActionChangelingTransform
+  name: Transform
+  description: Transform to the chosen person.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: transform
+      event: !type:TransformActionEvent
+      useDelay: 1
+
+- type: entity
+  id: ActionChangelingRegenerate
+  name: Regenerate
+  description: Enter in a regenerative stasis to heal self.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: reviving_stasis
+      event: !type:RegenerateActionEvent
+      checkCanInteract: false
+      checkConsciousness: false
+      useDelay: 1
+
+- type: entity
+  id: ActionChangelingLesserForm
+  name: changeling-ability-changeling-lesser-form
+  description: changeling-ability-changeling-lesser-form-desc
+  noSpawn: true
+  components:
+    - type: InstantAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: lesser_form
+      event: !type:LesserFormActionEvent
+      useDelay: 1
+      checkCanInteract: false
+    - type: LesserFormRestricted
+
+- type: entity
+  id: ActionExtractionSting
+  name: changeling-ability-extraction-sting
+  description: changeling-ability-extraction-sting-desc
+  noSpawn: true
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon:
+        sprite: White/Actions/changeling.rsi
+        state: sting_extract
+    event: !type:ExtractionStingActionEvent
+    canTargetSelf: false
+    useDelay: 1
+    whitelist:
+      components:
+      - HumanoidAppearance
+
+- type: entity
+  id: ActionTransformSting
+  name: changeling-ability-transform-sting
+  description: changeling-ability-transform-sting-desc
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: sting_transform
+      event: !type:TransformStingActionEvent
+      canTargetSelf: false
+      useDelay: 1
+      whitelist:
+        components:
+        - HumanoidAppearance
+
+- type: entity
+  id: ActionBlindSting
+  name: changeling-ability-blind-sting
+  description: changeling-ability-blind-sting-desc
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: sting_blind
+      event: !type:BlindStingActionEvent
+      canTargetSelf: false
+      useDelay: 1
+      whitelist:
+        components:
+        - HumanoidAppearance
+        - Blindable
+
+- type: entity
+  id: ActionMuteSting
+  name: changeling-ability-mute-sting
+  description: changeling-ability-mute-sting-desc
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: sting_mute
+      event: !type:MuteStingActionEvent
+      canTargetSelf: false
+      useDelay: 1
+      whitelist:
+        components:
+        - HumanoidAppearance
+
+- type: entity
+  id: ActionHallucinationSting
+  name: changeling-ability-hallucination-sting
+  description: changeling-ability-hallucination-sting-desc
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: sting_hallucination
+      event: !type:HallucinationStingActionEvent
+      canTargetSelf: false
+      useDelay: 1
+      whitelist:
+        components:
+        - HumanoidAppearance
+
+- type: entity
+  id: ActionCryoSting
+  name: changeling-ability-cryo-sting
+  description: changeling-ability-cryo-sting-desc
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: sting_cryo
+      event: !type:CryoStingActionEvent
+      canTargetSelf: false
+      useDelay: 1
+      whitelist:
+        components:
+        - HumanoidAppearance
+        - Temperature
+
+- type: entity
+  id: ActionAdrenalineSacs
+  name: changeling-ability-adrenaline-sacks
+  description: changeling-ability-adrenaline-sacks-desc
+  noSpawn: true
+  components:
+    - type: InstantAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: adrenaline_sacs
+      event: !type:AdrenalineSacsActionEvent
+      useDelay: 1
+      checkConsciousness: false
+      checkCanInteract: false
+    - type: LesserFormRestricted
+
+- type: entity
+  id: ActionFleshmend
+  name: changeling-ability-fleshmend
+  description: changeling-ability-fleshmend-desc
+  noSpawn: true
+  components:
+    - type: InstantAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: fleshmend
+      event: !type:FleshmendActionEvent
+      useDelay: 1
+      checkConsciousness: false
+      checkCanInteract: false
+    - type: LesserFormRestricted
+
+- type: entity
+  id: ActionArmblade
+  name: changeling-ability-changeling-armblade
+  description: changeling-ability-changeling-armblade-desc
+  noSpawn: true
+  components:
+    - type: InstantAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: arm_blade
+      event: !type:ArmbladeActionEvent
+      useDelay: 1
+    - type: LesserFormRestricted
+
+- type: entity
+  id: ActionShield
+  name: changeling-ability-changeling-shield
+  description: changeling-ability-changeling-shield-desc
+  noSpawn: true
+  components:
+    - type: InstantAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: shield
+      event: !type:OrganicShieldActionEvent
+      useDelay: 1
+    - type: LesserFormRestricted
+
+- type: entity
+  id: ActionArmor
+  name: changeling-ability-changeling-armor
+  description: changeling-ability-changeling-armor-desc
+  noSpawn: true
+  components:
+    - type: InstantAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: armor
+      event: !type:ChitinousArmorActionEvent
+      useDelay: 1
+    - type: LesserFormRestricted
+
+- type: entity
+  id: ActionHive
+  name: changeling-ability-hive
+  description: changeling-ability-hive-desc
+  noSpawn: true
+  components:
+    - type: InstantAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: hive_head
+      event: !type:HiveHeadActionEvent
+      useDelay: 1
+      checkCanInteract: false
+    - type: LesserFormRestricted
+
+- type: entity
+  id: ActionTentacleArm
+  name: changeling-ability-tentacle-arm
+  description: changeling-ability-tentacle-arm-desc
+  noSpawn: true
+  components:
+    - type: InstantAction
+      itemIconStyle: NoItem
+      icon:
+        sprite: White/Actions/changeling.rsi
+        state: tentacle_arm
+      event: !type:TentacleArmActionEvent
+      useDelay: 1
+    - type: LesserFormRestricted
+
+- type: entity
+  id: ActionBiodegrade
+  name: changeling-ability-biodegrade
+  description: changeling-ability-biodegrade-desc
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: White/Actions/changeling.rsi
+      state: biodegrade
+    event: !type:BiodegradeActionEvent
+    useDelay: 1
+
+- type: entity
+  id: ActionAugmentedEyesight
+  name: changeling-ability-eyesight
+  description: changeling-ability-eyesight-desc
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: White/Actions/changeling.rsi
+      state: augmented_eyesight
+    event: !type:AugmentedEyesightActionEvent
+
+- type: entity
+  id: ActionDissonantShriek
+  name: changeling-ability-dissonant-shriek
+  description: changeling-ability-dissonant-shriek-desc
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: White/Actions/changeling.rsi
+      state: dissonant_shriek
+    event: !type:DissonantShriekActionEvent
+    useDelay: 1
+  - type: LesserFormRestricted

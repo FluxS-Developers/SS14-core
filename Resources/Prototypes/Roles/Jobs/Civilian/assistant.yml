@@ -1,0 +1,18 @@
+- type: job
+  id: Passenger
+  name: job-name-passenger
+  description: job-description-passenger
+  playTimeTracker: JobPassenger
+  icon: "JobIconPassenger"
+  supervisors: job-supervisors-everyone
+  access:
+  - Maintenance
+
+- type: startingGear
+  id: PassengerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGrey
+    back: ClothingBackpackFilled
+    shoes: ClothingShoesColorBlack
+    id: PassengerPDA
+    ears: ClothingHeadsetGrey

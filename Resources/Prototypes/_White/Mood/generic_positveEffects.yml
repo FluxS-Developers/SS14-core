@@ -1,0 +1,72 @@
+- type: moodEffect
+  id: BeingHugged
+  description: "Обнимашки - круто."
+  moodChange: enum.MoodChangeLevel.Small
+  positive: true
+  timeout: 2
+
+- type: moodEffect
+  id: BeingPet
+  description: "Меня погладили!"
+  moodChange: enum.MoodChangeLevel.Small
+  positive: true
+  timeout: 2
+
+- type: moodEffect
+  id: ArcadePlay
+  description: "Я весело поиграл в интересную аркаду."
+  moodChange: enum.MoodChangeLevel.Small
+  positive: true
+  timeout: 8
+
+- type: moodEffect
+  id: GotBlessed
+  description: "Меня благословили."
+  moodChange: enum.MoodChangeLevel.Small
+  positive: true
+  timeout: 8
+
+- type: moodEffect
+  id: PetAnimal
+  description: "Животные такие милые! Не могу перестать их гладить!"
+  moodChange: enum.MoodChangeLevel.Small
+  positive: true
+  timeout: 5
+
+- type: moodEffect
+  id: SavedLife
+  description: "Так приятно спасать чью-то жизнь."
+  moodChange: enum.MoodChangeLevel.Medium
+  positive: true
+  timeout: 8
+
+- type: moodEffect
+  id: TraitorFocused #Used for traitors to boost their goals completion.
+  description: "У меня есть цель, и я добьюсь её, во что бы то ни стало!"
+  moodChange: enum.MoodChangeLevel.Medium
+  positive: true
+
+- type: moodEffect
+  id: RevolutionFocused #Used for revolution
+  description: "СЛАВА РЕВОЛЮЦИИ!!!"
+  moodChange: enum.MoodChangeLevel.Medium
+  positive: true
+
+- type: moodEffect
+  id: CultFocused
+  description: "Знаю правду, славим великого!"
+  moodChange: enum.MoodChangeLevel.Big
+  positive: true
+
+- type: moodEffect
+  id: Stimulator
+  description: "Я ЧУВСТВУЮ ЭТО, В МОЕЙ КРОВИ НАХОДИТСЯ ЧТО-ТО НЕОБЫЧНОЕ!!"
+  moodChange: enum.MoodChangeLevel.Medium
+  positive: true
+  timeout: 1
+
+- type: moodEffect
+  id: WizardFocused
+  description: "Ни что не в силах остановить мое могущество!"
+  moodChange: enum.MoodChangeLevel.Medium
+  positive: true

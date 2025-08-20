@@ -1,0 +1,65 @@
+- type: entity
+  parent: ClothingHeadHatWizard
+  id: ClothingHeadHatRealWizardBlue
+  components:
+    - type: WizardClothes
+
+- type: entity
+  parent: ClothingOuterWizard
+  id: ClothingOuterRealWizardBlue
+  components:
+    - type: WizardClothes
+
+- type: entity
+  parent: ClothingHeadHatRedwizard
+  id: ClothingHeadHatRealWizardRed
+  components:
+    - type: WizardClothes
+
+- type: entity
+  parent: ClothingOuterWizardRed
+  id: ClothingOuterRealWizardRed
+  components:
+    - type: WizardClothes
+
+- type: entity
+  parent: ClothingHeadHatVioletwizard
+  id: ClothingHeadHatRealWizardViolet
+  components:
+    - type: WizardClothes
+
+- type: entity
+  parent: ClothingOuterWizardViolet
+  id: ClothingOuterRealWizardViolet
+  components:
+    - type: WizardClothes
+
+- type: entity
+  parent: ClothingHeadHatWizard
+  id: ClothingHeadHatRealWizardFancy
+  components:
+    - type: WizardClothes
+    - type: Sprite
+      sprite: White/Clothing/Head/wizhat.rsi
+    - type: Clothing
+      sprite: White/Clothing/Head/wizhat.rsi
+
+- type: entity
+  parent: ClothingHeadHatWizard
+  id: ClothingHeadHatRealWizardFancyAlt
+  components:
+    - type: WizardClothes
+    - type: Sprite
+      sprite: White/Clothing/Head/wizhat-alt.rsi
+    - type: Clothing
+      sprite: White/Clothing/Head/wizhat-alt.rsi
+
+- type: entity
+  parent: ClothingOuterWizard
+  id: ClothingOuterRealWizardFancy
+  components:
+    - type: WizardClothes
+    - type: Sprite
+      sprite: White/Clothing/OuterClothing/robe.rsi
+    - type: Clothing
+      sprite: White/Clothing/OuterClothing/robe.rsi

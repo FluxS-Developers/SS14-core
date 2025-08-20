@@ -1,0 +1,23 @@
+- type: vendingMachineInventory
+  id: RoboticsInventory
+  startingInventory:
+    CableApcStack: 10
+    ProximitySensor: 10
+    RemoteSignaller: 10
+    SciFlash: 4
+    ClothingEyesHudDiagnostic: 2
+    ClothingEyesEyepatchHudDiag: 2
+    Igniter: 3
+    HandheldHealthAnalyzer: 3
+    Scalpel: 2
+    SawElectric: 2
+    NitrousOxideTankFilled: 2
+    ClothingMaskBreathMedical: 5
+    ClothingHeadHatWeldingMaskFlame: 1
+    Welder: 1
+    Screwdriver: 2
+    Crowbar: 2
+  emaggedInventory:
+    SawAdvanced: 1
+    ScalpelAdvanced: 1
+    EncryptionKeyBinary: 1

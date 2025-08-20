@@ -1,0 +1,11 @@
+- type: entity
+  noSpawn: true
+  parent: [BaseBullet, BaseBulletTrail]
+  id: BulletAntiMateriel
+  name: bullet (.60 anti-materiel)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 140 #WD edit
+        Structural: 150 #WD edit

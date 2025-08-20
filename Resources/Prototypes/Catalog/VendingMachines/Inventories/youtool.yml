@@ -1,0 +1,22 @@
+- type: vendingMachineInventory
+  id: YouToolInventory
+  startingInventory:
+    CableApcStack: 5
+    Crowbar: 2
+    Welder: 2
+    Wirecutter: 2
+    Wrench: 2
+    Screwdriver: 2
+    trayScanner: 3
+    NetworkConfigurator: 3
+    GasAnalyzer: 3
+    FlashlightLantern: 5
+    ClothingHandsGlovesColorYellowBudget: 3
+    SprayPainter: 3
+    Multitool: 2
+
+  contrabandInventory:
+    ClothingHandsGlovesColorYellow: 1
+
+  emaggedInventory:
+    SyndicateJawsOfLife: 1

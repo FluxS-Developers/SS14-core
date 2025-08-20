@@ -1,0 +1,51 @@
+- type: listing
+  id: RevenantDefile
+  name: revenant-defile-name # WD Ahead of wizden
+  description: revenant-defile-desc # WD Ahead of wizden
+  productAction: ActionRevenantDefile
+  cost:
+    StolenEssence: 10
+  categories:
+  - RevenantAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: RevenantOverloadLights
+  name: revenant-overload-name # WD Ahead of wizden
+  description: revenant-overload-desc # WD Ahead of wizden
+  productAction: ActionRevenantOverloadLights
+  cost:
+    StolenEssence: 25
+  categories:
+  - RevenantAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: RevenantBlight
+  name: revenant-blight-name # WD Ahead of wizden
+  description: revenant-blight-desc # WD Ahead of wizden
+  productAction: ActionRevenantBlight
+  cost:
+    StolenEssence: 75
+  categories:
+  - RevenantAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: RevenantMalfunction
+  name: revenant-malfunction-name # WD Ahead of wizden
+  description: revenant-malfunction-desc # WD Ahead of wizden
+  productAction: ActionRevenantMalfunction
+  cost:
+    StolenEssence: 125
+  categories:
+  - RevenantAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1

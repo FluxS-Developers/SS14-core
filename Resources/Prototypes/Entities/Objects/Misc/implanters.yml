@@ -1,0 +1,260 @@
+# Implanters
+
+- type: entity
+  name: implanter
+  description: A syringe exclusively designed for the injection and extraction of subdermal implants.
+  id: BaseImplanter
+  parent: BaseItem
+  abstract: true
+  components:
+    - type: ItemSlots
+    - type: ContainerContainer
+      containers:
+        implanter_slot: !type:ContainerSlot { }
+    - type: Implanter
+      whitelist:
+        components:
+        - Body # no chair microbomb
+      blacklist:
+        components:
+        - BorgChassis
+        - Guardian # no holoparasite macrobomb wombo combo
+        tags:
+        - Unimplantable
+      currentMode: Draw
+      implanterSlot:
+        name: Implant
+        locked: True
+        priority: 0
+        whitelist:
+          tags:
+            - SubdermalImplant
+    - type: Sprite
+      sprite: Objects/Specific/Medical/implanter.rsi
+      state: implanter0
+      layers:
+        - state: implanter0
+          map: [ "implantOnly" ]
+          visible: true
+        - state: implanter1
+          map: [ "implantFull" ]
+          visible: false
+    - type: Item
+      storedRotation: -90
+      sprite: Objects/Specific/Medical/implanter.rsi
+      heldPrefix: 0
+      size: Small
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.ImplanterVisuals.Full:
+          implantFull:
+            True: {visible: true}
+            False: {visible: false}
+        enum.ImplanterImplantOnlyVisuals.ImplantOnly:
+          implantOnly:
+            True: {state: broken}
+            False: {state: implanter0}
+
+- type: entity
+  id: Implanter
+  parent: BaseImplanter
+  description: A disposable syringe exclusively designed for the injection and extraction of subdermal implants.
+  components:
+    - type: Tag
+      tags:
+        - Trash
+
+- type: entity
+  parent: Implanter
+  id: ImplanterAdmeme
+  suffix: Admeme
+  components:
+  - type: Implanter
+    # go wild with sentient chairs with macrobombs
+    whitelist: null
+    blacklist: null
+    singleUse: false
+
+- type: entity
+  id: BaseImplantOnlyImplanter
+  parent: Implanter
+  description: A disposable syringe exclusively designed for the injection of subdermal implants.
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Medical/implanter.rsi
+      state: implanter0
+      layers:
+        - state: implanter1
+          map: [ "implantFull" ]
+          visible: true
+        - state: implanter0
+          map: [ "implantOnly" ]
+    - type: Implanter
+      currentMode: Inject
+      implantOnly: true
+
+- type: entity
+  id: BaseImplantOnlyImplanterSyndi
+  parent: BaseImplantOnlyImplanter
+  description: A compact disposable syringe exclusively designed for the injection of subdermal implants.
+  abstract: true
+  components:
+    - type: Item
+      sprite: Objects/Specific/Medical/syndi_implanter.rsi
+    - type: Sprite
+      sprite: Objects/Specific/Medical/syndi_implanter.rsi
+      state: implanter1
+      layers:
+        - state: implanter0
+          map: [ "implantFull" ]
+          visible: true
+        - state: implanter1
+          map: [ "implantOnly" ]
+    - type: GenericVisualizer
+      visuals:
+        enum.ImplanterVisuals.Full:
+          implantFull:
+            True: {visible: true}
+            False: {visible: false}
+        enum.ImplanterImplantOnlyVisuals.ImplantOnly:
+          implantOnly:
+            True: {state: broken}
+            False: {state: implanter1}
+    - type: Implanter
+      implantTime: 2
+      drawTime: 2
+    - type: Tag
+      tags: []
+
+#Fun implanters
+
+- type: entity
+  id: SadTromboneImplanter
+  parent: BaseImplantOnlyImplanter
+  suffix: sad trombone
+  components:
+    - type: Implanter
+      implant: SadTromboneImplant
+
+- type: entity
+  id: LightImplanter
+  parent: BaseImplantOnlyImplanter
+  suffix: light
+  components:
+    - type: Implanter
+      implant: LightImplant
+
+- type: entity
+  id: BikeHornImplanter
+  parent: BaseImplantOnlyImplanter
+  suffix: bike horn
+  components:
+    - type: Implanter
+      implant: BikeHornImplant
+
+#Security implanters
+
+- type: entity
+  id: TrackingImplanter
+  parent: BaseImplantOnlyImplanter
+  suffix: tracking
+  components:
+    - type: Implanter
+      implant: TrackingImplant
+
+#Traitor implanters
+
+- type: entity
+  id: StorageImplanter
+  parent: BaseImplantOnlyImplanterSyndi
+  suffix: storage
+  components:
+    - type: Implanter
+      implant: StorageImplant
+
+- type: entity
+  id: FreedomImplanter
+  parent: BaseImplantOnlyImplanterSyndi
+  suffix: freedom
+  components:
+    - type: Implanter
+      implant: FreedomImplant
+
+- type: entity
+  id: UplinkImplanter
+  parent: BaseImplantOnlyImplanterSyndi
+  suffix: uplink
+  components:
+  - type: Implanter
+    implant: UplinkImplant
+  - type: GiftIgnore
+
+- type: entity
+  id: EmpImplanter
+  parent: BaseImplantOnlyImplanterSyndi
+  suffix: EMP
+  components:
+    - type: Implanter
+      implant: EmpImplant
+
+- type: entity
+  id: ScramImplanter
+  parent: BaseImplantOnlyImplanterSyndi
+  suffix: scram
+  components:
+    - type: Implanter
+      implant: ScramImplant
+
+- type: entity
+  id: DnaScramblerImplanter
+  parent: BaseImplantOnlyImplanterSyndi
+  suffix: DNA scrambler
+  components:
+    - type: Implanter
+      implant: DnaScramblerImplant
+
+#Nuclear Operative/Special implanters
+
+- type: entity
+  id: MicroBombImplanter
+  parent: BaseImplantOnlyImplanterSyndi
+  suffix: micro-bomb
+  components:
+    - type: Implanter
+      implant: MicroBombImplant
+
+- type: entity
+  id: MacroBombImplanter
+  parent: BaseImplantOnlyImplanterSyndi
+  suffix: macro-bomb
+  components:
+    - type: Implanter
+      implant: MacroBombImplant
+
+- type: entity
+  id: DeathRattleImplanter
+  parent: BaseImplantOnlyImplanterSyndi
+  suffix: death rattle
+  components:
+    - type: Implanter
+      implant: DeathRattleImplant
+
+- type: entity
+  id: DeathAcidifierImplanter
+  parent: BaseImplantOnlyImplanterSyndi
+  suffix: death acidifier
+  components:
+  - type: Implanter
+    implant: DeathAcidifierImplant
+
+# Security and Command implanters
+
+- type: entity
+  id: MindShieldImplanter
+  parent: BaseImplantOnlyImplanter
+  suffix: mind-shield
+  components:
+    - type: Implanter
+      implant: MindShieldImplant

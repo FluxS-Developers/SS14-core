@@ -1,0 +1,126 @@
+- type: radioChannel
+  id: Common
+  name: chat-radio-common
+  keycodes:
+    - ";"
+  frequency: 1459
+  color: "#32cd32"
+
+- type: radioChannel
+  id: CentCom
+  name: chat-radio-centcom
+  keycodes:
+    - 'y'
+    - 'ц'
+  frequency: 1337
+  color: "#2681a5"
+  longRange: true
+
+- type: radioChannel
+  id: Command
+  name: chat-radio-command
+  keycodes:
+    - 'c'
+    - 'к'
+  frequency: 1353
+  color: "#fcdf03"
+
+- type: radioChannel
+  id: Engineering
+  name: chat-radio-engineering
+  keycodes:
+    - 'e'
+    - 'и'
+  frequency: 1357
+  color: "#f37746"
+
+- type: radioChannel
+  id: Medical
+  name: chat-radio-medical
+  keycodes:
+    - 'm'
+    - 'м'
+  frequency: 1355
+  color: "#57b8f0"
+
+- type: radioChannel
+  id: Science
+  name: chat-radio-science
+  keycodes:
+    - 'n'
+    - 'н'
+  frequency: 1351
+  color: "#c68cfa"
+
+- type: radioChannel
+  id: Security
+  name: chat-radio-security
+  keycodes:
+    - 's'
+    - 'о'
+  frequency: 1359
+  color: "#dd3535"
+
+- type: radioChannel
+  id: Service
+  name: chat-radio-service
+  keycodes:
+    - 'v'
+    - 'в'
+  frequency: 1349
+  color: "#6ca729"
+
+- type: radioChannel
+  id: Supply
+  name: chat-radio-supply
+  keycodes:
+    - 'u'
+    - 'с'
+  frequency: 1347
+  color: "#b88646"
+
+- type: radioChannel
+  id: Syndicate
+  name: chat-radio-syndicate
+  keycodes:
+    - 't'
+    - 'т'
+  frequency: 1213
+  color: "#8f4a4b"
+  longRange: true
+
+- type: radioChannel
+  id: Handheld
+  name: chat-radio-handheld
+  frequency: 1330
+  color: "#d39f01"
+  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  longRange: true
+
+- type: radioChannel
+  id: Binary
+  name: chat-radio-binary
+  keycodes:
+    - 'b'
+    - 'б'
+  frequency: 1001
+  color: "#2ed2fd"
+  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  longRange: true
+
+- type: radioChannel
+  id: Freelance
+  name: chat-radio-freelance
+  keycodes:
+    - 'f'
+    - 'ф'
+  frequency: 1984
+  color: "#f6ce64"
+  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  longRange: true
+
+- type: radioChannel # WD start
+  id: DeepSpace
+  name: chat-radio-deepspace
+  frequency: 1501
+  longRange: true # WD end

@@ -1,0 +1,53 @@
+- type: job
+  id: HeadOfSecurity
+  name: job-name-hos
+  description: job-description-hos
+  playTimeTracker: JobHeadOfSecurity
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobWarden
+      time: 3600
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 18000
+    - !type:OverallPlaytimeRequirement
+      time: 108000
+    - !type:AgeRequirement
+      requiredAge: 20
+    - !type:SpeciesRequirement
+      species:
+      - Human
+  weight: 10
+  icon: "JobIconHeadOfSecurity"
+  requireAdminNotify: true
+  arrivalNotificationPrototype: HeadOfSecurityArrivalNotification
+  supervisors: job-supervisors-captain
+  whitelistedSpecies:
+    - Human
+  canBeAntag: false
+  access:
+  - HeadOfSecurity
+  - Command
+  - Brig
+  - Security
+  - Armory
+  - Maintenance
+  - Service
+  - External
+  - Detective
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: HoSGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoS
+    back: ClothingBackpackHOSFilled
+    shoes: ClothingShoesBootsCombatFilled
+    id: HoSPDA
+    ears: ClothingHeadsetAltSecurityCommand

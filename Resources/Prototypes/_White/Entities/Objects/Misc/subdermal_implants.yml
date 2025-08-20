@@ -1,0 +1,71 @@
+- type: entity
+  parent: BaseSubdermalImplant
+  id: SmokeImplant
+  name: smoke implant
+  description: This implant releases smoke cloud on activation.
+  noSpawn: true
+  components:
+    - type: SubdermalImplant
+      implantAction: ActivateSmokeImplant
+    - type: TriggerImplantAction
+    - type: SmokeOnTrigger
+      spreadAmount: 25
+      duration: 15
+    - type: SoundOnTrigger
+      sound: /Audio/Effects/smoke.ogg
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: HardlightSpearImplant
+  name: hardlight spear implant
+  description: This implant creates hardlight spear in your hands.
+  noSpawn: true
+  components:
+    - type: SubdermalImplant
+      implantAction: ActivateHardlightSpearImplant
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: MindslaveImplant
+  name: mindslave implant
+  description: Make someone a proper doll for your use.
+  noSpawn: true
+  components:
+  - type: SubdermalImplant
+  - type: Tag
+    tags:
+    - MindSlave
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: NeuroStabilizationImplant
+  name: neuro stabilization implant
+  description: Blocks all incoming stamina damage at a cost of shock.
+  noSpawn: true
+  components:
+  - type: SubdermalImplant
+    permanent: true
+  - type: Tag
+    tags:
+    - NeuroStabilization
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: VoiceActivatedBombImplant
+  name: voice activated Bomb implant
+  description: A microbomb implant with a trigger that causes it to go off by vocal keywords.
+  noSpawn: true
+  components:
+    - type: SubdermalImplant
+      permanent: true
+    - type: TriggerOnVoice
+    - type: ExplodeOnTrigger
+    - type: Explosive
+      explosionType: MicroBomb
+      totalIntensity: 150
+      intensitySlope: 5
+      maxIntensity: 30
+      canCreateVacuum: false
+    - type: Tag
+      tags:
+        - VoiceActivatedBombImplant

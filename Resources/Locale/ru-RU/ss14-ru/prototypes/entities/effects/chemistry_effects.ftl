@@ -1,0 +1,14 @@
+ent-Smoke = дым
+    .desc = { "" }
+ent-Foam = пена
+    .desc = { "" }
+ent-IronMetalFoam = железная металлическая пена
+    .desc = { ent-Foam.desc }
+ent-AluminiumMetalFoam = алюминиевая металлическая пена
+    .desc = { ent-Foam.desc }
+ent-BaseFoamedMetal = металлическая пена
+    .desc = { "" }
+ent-FoamedIronMetal = вспененное железо
+    .desc = Для заделывания пробоин в корпусе.
+ent-FoamedAluminiumMetal = вспененный алюминий
+    .desc = Для заделывания пробоин в корпусе.

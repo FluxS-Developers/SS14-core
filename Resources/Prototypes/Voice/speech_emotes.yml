@@ -1,0 +1,372 @@
+# vocal emotes
+- type: emote
+  id: Scream
+  category: Vocal
+  buttonText: Кричать
+  chatMessages: [ кричит, орет, вопит, рявкает ]
+  chatTriggers:
+  - кричит
+  - закричал
+  - закричала
+  - орет
+  - заорал
+  - заорала
+  - визжит
+  - завизжал
+  - завизжала
+  - взвизгнул
+  - взвизгнула
+  - рявкает
+  - рявкнул
+  - рявкнула
+  - вопит
+  allowMenu: true
+
+- type: emote
+  id: Laugh
+  category: Vocal
+  buttonText: Смеяться
+  chatMessages: [ смеется, ржет, усмехается, хохочет, гогочет ]
+  chatTriggers:
+  - смеется
+  - просмеялся
+  - засмеялся
+  - засмеялась
+  - хихикает
+  - хихикнул
+  - хихикнула
+  - хихикает
+  - ржет
+  - усмехается
+  - усмехнулась
+  - усмехнулся
+  - хохочет
+  - гогочет
+  allowMenu: true
+
+- type: emote
+  id: Honk
+  category: Vocal
+  chatMessages: [ хонкает ]
+
+- type: emote
+  id: Sigh
+  category: Vocal
+  buttonText: Вздохнуть
+  chatMessages: [ вздыхает ]
+  chatTriggers:
+  - вздыхает
+  - вздохнула
+  - вздохнул
+  - вздохнуло
+  allowMenu: true
+
+- type: emote
+  id: Whistle
+  category: Vocal
+  buttonText: Свистнуть
+  chatMessages: [ свистит ]
+  chatTriggers:
+  - свистит
+  - свистнул
+  - свистнула
+  - свистнуло
+  allowMenu: true
+
+- type: emote
+  id: Crying
+  category: Vocal
+  buttonText: Плакать
+  chatMessages: [ плачет ]
+  chatTriggers:
+  - плачет
+  - заплакал
+  - заплакала
+  - заплакало
+  - рыдает
+  - хнычет
+  allowMenu: true
+
+- type: emote
+  id: Squish
+  category: Vocal
+  chatMessages: [ хлюпает ]
+  chatTriggers:
+  - хлюпать
+  - хлюпает
+
+- type: emote
+  id: Chitter
+  category: Vocal
+  chatMessages: [ стрекочет ]
+  chatTriggers:
+  - стрекочет
+  - стрекочет.
+  - стрекочет!
+  - щебечет
+  - щебечет.
+  - щебечет!
+
+- type: emote
+  id: Squeak
+  category: Vocal
+  chatMessages: [сквикает]
+  chatTriggers:
+  - сквик
+  - сквик.
+  - сквикает
+  - сквикает.
+
+- type: emote
+  id: Click
+  category: Vocal
+  chatMessages: [щёлкает]
+  chatTriggers:
+  - щелк
+  - щёлкает
+  - щелкает
+  - щёлк
+
+# hand emotes
+- type: emote
+  id: Clap
+  category: Hands
+  buttonText: Хлопать
+  chatMessages: [ хлопает ]
+  chatTriggers:
+  - хлопает
+  - хлопает!
+  - захлопала
+  - захлопала!
+  - захлопал
+  - захлопал!
+  - похлопал
+  - похлопал!
+  allowMenu: true
+
+- type: emote
+  id: Snap
+  category: Hands
+  buttonText: Щелкать пальцами
+  chatMessages: [ щелкает пальцами ] # snaps <{THEIR($ent)}> fingers?
+  chatTriggers:
+  - щелкает пальцами
+  - щелкнул пальцами
+  - щелкнула пальцами
+  - щелкунл пальцами
+  - щелкунла пальцами
+  allowMenu: true
+
+- type: emote
+  id: Salute
+  category: Hands
+  buttonText: Салютовать
+  chatMessages: [ салютует ]
+  chatTriggers:
+  - салютует
+  - отдаёт честь
+  - отдает честь
+  allowMenu: true
+
+- type: emote
+  id: WaveHand
+  category: Hands
+  buttonText: Махать рукой
+  chatMessages: [машет рукой]
+  allowMenu: true
+
+- type: emote
+  id: Nod
+  category: Hands
+  buttonText: Кивать
+  chatMessages: [кивает]
+  allowMenu: true
+
+- type: emote
+  id: ShakeHead
+  category: Hands
+  buttonText: Покачать головой
+  chatMessages: [качает головой]
+  allowMenu: true
+
+- type: emote
+  id: Frown
+  category: Hands
+  buttonText: Хмуриться
+  chatMessages: [хмурится]
+  allowMenu: true
+
+- type: emote
+  id: Smile
+  category: Hands
+  buttonText: Улыбаться
+  chatMessages: [улыбается]
+  allowMenu: true
+
+- type: emote
+  id: Sniff
+  category: Hands
+  buttonText: Принюхиваться
+  chatMessages: [принюхивается]
+  allowMenu: true
+
+- type: emote
+  id: LickLips
+  category: Hands
+  buttonText: Облизываться
+  chatMessages: [облизывается]
+  allowMenu: true
+
+- type: emote
+  id: Gasp
+  name: chat-emote-name-gasp
+  whitelist:
+    components:
+    - Respirator
+  chatMessages: ["chat-emote-msg-gasp"]
+  chatTriggers:
+  - задыхается
+
+- type: emote
+  id: DefaultDeathgasp
+  chatMessages: [ "emote-deathgasp" ]
+  chatTriggers:
+  - отключается и бессильно падает, его глаза становятся пустыми и безжизненными...
+  - отключается и бессильно падает, её глаза становятся пустыми и безжизненными...
+  - отключается и бессильно падает, их глаза становятся пустыми и безжизненными...
+
+- type: emote
+  id: Buzz
+  category: Vocal
+  chatMessages: [жужжит]
+  chatTriggers:
+    - жужжит
+    - жужжит.
+    - жужжит!
+    - buzzing
+    - buzzing!
+    - buzzing.
+    - buzz
+    - buzz.
+    - buzz!
+    - buzzed
+    - buzzed.
+    - buzzed!
+    - buzzes
+    - buzzes.
+    - buzzes!
+
+- type: emote
+  id: Weh
+  category: Vocal
+  chatMessages: [Вах!]
+
+- type: emote
+  id: Chirp
+  category: Vocal
+  chatMessages: [чирикает]
+  chatTriggers:
+  - чирик
+  - чирик.
+  - чирикает.
+  - чирикает
+  - чик-чирикает
+  - чик-чирикает.
+  - chirps.
+  - chirp.
+  - chirp!
+  - chirping.
+  - chirped.
+
+# Machine Emotes
+- type: emote
+  id: Beep
+  category: Vocal
+  chatMessages: [пищит]
+  chatTriggers:
+    - писк
+    - пищит
+    - beep
+    - beep!
+    - beep.
+    - beeps
+    - beeps.
+    - beeps!
+    - beeped
+    - beeped.
+    - beeped!
+    - beeping
+    - beeping.
+    - beeping!
+
+- type: emote
+  id: Chime
+  category: Vocal
+  chatMessages: [chimes.]
+  chatTriggers:
+    - chime
+    - chime.
+    - chime!
+    - chimes
+    - chimes.
+    - chimes!
+    - chimed
+    - chimed.
+    - chimed!
+    - chiming
+    - chiming,
+    - chiming!
+
+- type: emote
+  id: Buzz-Two
+  category: Vocal
+  chatMessages: [buzzesTwice.]
+  chatTriggers:
+    - buzztwice
+    - buzztwice.
+    - buzztwice!
+    - buzzstwice
+    - buzzstwice.
+    - buzzstwice!
+    - buzzestwice
+    - buzzestwice.
+    - buzzestwice!
+    - buzzingtwice
+    - buzzingtwice.
+    - buzzingtwice!
+    - buzzedtwice
+    - buzzedtwice.
+    - buzzedtwice!
+    - buzz twice
+    - buzz twice.
+    - buzz twice!
+    - buzzs twice
+    - buzzs twice.
+    - buzzs twice!
+    - buzzes twice
+    - buzzes twice.
+    - buzzes twice!
+    - buzzing twice
+    - buzzing twice.
+    - buzzing twice!
+    - buzzed twice
+    - buzzed twice.
+    - buzzed twice!
+
+- type: emote
+  id: Ping
+  category: Vocal
+  chatMessages: [pings.]
+  chatTriggers:
+    - ping
+    - ping.
+    - ping!
+    - pings
+    - pings.
+    - pings!
+    - pinged
+    - pinged.
+    - pinged!
+    - pinging
+    - pinging.
+    - pinging!

@@ -1,0 +1,44 @@
+- type: entity
+  parent: StunprodBase
+  id: Snatcherprod
+  name: хваталка
+  description: Искрится жаждой воровства и коварства.
+  components:
+  - type: Sprite
+    sprite: White/Objects/Weapons/snatcherprod.rsi
+    layers:
+    - state: snatcherprod_nocell
+      map: [ "enum.ToggleVisuals.Layer" ]
+  - type: Item
+    sprite: White/Objects/Weapons/snatcherprod.rsi
+  - type: GenericVisualizer
+    visuals:
+     enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          nocell: {state: snatcherprod_nocell}
+          True: {state: snatcherprod_on}
+          False: {state: snatcherprod_off}
+  - type: Snatcherprod
+  - type: Construction
+    deconstructionTarget: cuffs
+    graph: StunprodGraph
+    node: snatcherprod
+
+- type: entity
+  parent: BaseItem
+  id: ProdUnfinished
+  name: обмотанный стержень
+  description: Стержень с проводами.
+  components:
+  - type: Sprite
+    sprite: White/Objects/Weapons/prod.rsi
+    state: prod_unfinished
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    storedRotation: 44
+  - type: Construction
+    deconstructionTarget: cuffs
+    graph: StunprodGraph
+    node: unfinished

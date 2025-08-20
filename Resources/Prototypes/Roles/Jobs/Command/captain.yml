@@ -1,0 +1,51 @@
+- type: job
+  id: Captain
+  name: job-name-captain
+  description: job-description-captain
+  playTimeTracker: JobCaptain
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 18000 # 15 3
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 18000 # 15 3
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 18000 # 15 3
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 18000 # 15 3
+    - !type:AgeRequirement
+      requiredAge: 20
+    - !type:SpeciesRequirement
+      species:
+      - Human
+      - Felinid
+  weight: 20
+  icon: "JobIconCaptain"
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  arrivalNotificationPrototype: CaptainArrivalNotification
+  supervisors: job-supervisors-centcom
+  whitelistedSpecies:
+    - Human
+    - Felinid
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: CaptainGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCaptain
+    back: ClothingBackpackCaptainFilled
+    shoes: ClothingShoesBootsLaceup
+    id: CaptainPDA
+    ears: ClothingHeadsetAltCommand

@@ -1,0 +1,38 @@
+- type: job
+  id: Warden
+  name: job-name-warden
+  description: job-description-warden
+  playTimeTracker: JobWarden
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 36000 #10 hrs
+    - !type:SpeciesRequirement
+      species:
+      - Human
+  icon: "JobIconWarden"
+  supervisors: job-supervisors-hos
+  whitelistedSpecies:
+    - Human
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - Armory
+  - Maintenance
+  - Service
+  - External
+  - Detective
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: WardenGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitWarden
+    back: ClothingBackpackSecurityFilled
+    shoes: ClothingShoesBootsCombatFilled
+    id: WardenPDA
+    ears: ClothingHeadsetAltSecurity

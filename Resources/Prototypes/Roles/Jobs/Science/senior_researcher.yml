@@ -1,0 +1,27 @@
+- type: job
+  id: SeniorResearcher
+  name: job-name-senior-researcher
+  description: job-description-senior-researcher
+  playTimeTracker: JobSeniorResearcher
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 216000 #60 hrs
+  icon: "JobIconSeniorResearcher"
+  supervisors: job-supervisors-rd
+  canBeAntag: false
+  special:
+    - !type:AddImplantSpecial
+      implants: [ MindShieldImplant ]
+  access:
+  - Research
+  - Maintenance
+
+- type: startingGear
+  id: SeniorResearcherGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSeniorResearcher
+    back: ClothingBackpackScienceFilled
+    shoes: ClothingShoesColorBlack
+    id: SeniorResearcherPDA
+    ears: ClothingHeadsetScience

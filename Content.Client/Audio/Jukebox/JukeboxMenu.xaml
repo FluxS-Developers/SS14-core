@@ -1,0 +1,23 @@
+<ui:FancyWindow xmlns="https://spacestation14.io" xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls"
+                xmlns:jb="clr-namespace:Content.Client.Audio.Jukebox"
+                SetSize="400 500" Title="{Loc 'jukebox-menu-title'}">
+    <BoxContainer Margin="4 0" Orientation="Vertical">
+        <Label Text="{Loc 'jukebox-menu-songs'}"/>
+        <ScrollContainer HScrollEnabled="False" HorizontalExpand="True" VerticalExpand="True" Margin="13 3 3 3">
+            <BoxContainer Name="MusicList" Orientation="Vertical"
+                          HorizontalExpand="True" VerticalExpand="True" SizeFlagsStretchRatio="8"/>
+        </ScrollContainer>
+        <Label Text="{Loc 'jukebox-menu-queue'}"/>
+        <ScrollContainer HScrollEnabled="False" HorizontalExpand="True" VerticalExpand="True" Margin="13 3 3 3">
+            <BoxContainer Name="MusicListQueue" Orientation="Vertical"
+                          HorizontalExpand="True" VerticalExpand="True" SizeFlagsStretchRatio="8"/>
+        </ScrollContainer>
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+            <Label Name="SongSelected" Text="{Loc 'jukebox-menu-selectedsong-none'}" />
+            <BoxContainer HorizontalExpand="True"/>
+            <Label Name="DurationLabel" Text="---" />
+        </BoxContainer>
+        <Slider Name="PlaybackSlider" Visible="false" HorizontalExpand="True" />
+        <jb:JukeboxEntry Name="CurrentSong" Visible="false" EntryType="Current"/>
+    </BoxContainer>
+</ui:FancyWindow>

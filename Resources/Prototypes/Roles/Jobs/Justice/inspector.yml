@@ -1,0 +1,47 @@
+- type: job
+  id: Inspector
+  name: job-name-inspector
+  description: job-description-inspector
+  playTimeTracker: JobInspector
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 108000 #30 hrs
+    - !type:DepartmentTimeRequirement
+      department: Justice
+      time: 54000 #15 hrs
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 36000 #10 hrs
+    - !type:AgeRequirement
+      requiredAge: 20
+    - !type:SpeciesRequirement
+      species:
+      - Human
+  weight: 10
+  icon: "JobIconInspector"
+  arrivalNotificationPrototype: InspectorArrivalNotification
+  supervisors: job-supervisors-captain
+  whitelistedSpecies:
+    - Human
+  canBeAntag: true
+  access:
+    - Service
+    - Lawyer
+    - Brig
+    - Maintenance
+    - Command
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: InspectorGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitWhiteInspectorFormal
+    back: ClothingBackpackFilled
+    shoes: ClothingShoesBootsInspector
+    id: InspectorPDA
+    ears: ClothingHeadsetAltSecurityCommand
+  inhand:
+    - BriefcaseBrownFilled

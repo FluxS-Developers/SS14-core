@@ -1,0 +1,241 @@
+# Body Transforms
+- type: listing
+  id: ChangelingLesserForm
+  name: changeling-ability-changeling-lesser-form
+  description: changeling-ability-changeling-lesser-form-desc
+  productAction: ActionChangelingLesserForm
+  cost:
+    ChangelingPoint: 1
+  categories:
+  - ChangelingAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: ChangelingArmblade
+  name: changeling-ability-changeling-armblade
+  description: changeling-ability-changeling-armblade-desc
+  productAction: ActionArmblade
+  cost:
+    ChangelingPoint: 2
+  categories:
+    - ChangelingAbilities
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+- type: listing
+  id: ChangelingShield
+  name: changeling-ability-changeling-shield
+  description: changeling-ability-changeling-shield-desc
+  productAction: ActionShield
+  cost:
+    ChangelingPoint: 1
+  categories:
+    - ChangelingAbilities
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+- type: listing
+  id: ChangelingArmor
+  name: changeling-ability-changeling-armor
+  description: changeling-ability-changeling-armor-desc
+  productAction: ActionArmor
+  cost:
+    ChangelingPoint: 1
+  categories:
+    - ChangelingAbilities
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+- type: listing
+  id: ChangelingHive
+  name: changeling-ability-hive
+  description: changeling-ability-hive-desc
+  productAction: ActionHive
+  cost:
+    ChangelingPoint: 2
+  categories:
+    - ChangelingAbilities
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+- type: listing
+  id: ChangelingTentacleArm
+  name: changeling-ability-tentacle-arm
+  description: changeling-ability-tentacle-arm-desc
+  productAction: ActionTentacleArm
+  cost:
+    ChangelingPoint: 2
+  categories:
+    - ChangelingAbilities
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+- type: listing
+  id: ChangelingVoidAdaptation
+  name: changeling-ability-void-adaptation
+  description: changeling-ability-void-adaptation-desc
+  icon: { sprite: /Textures/White/Actions/changeling.rsi, state: organic_suit }
+  components:
+    - VoidAdaptation
+  cost:
+    ChangelingPoint: 2
+  categories:
+    - ChangelingAbilities
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+# Stings
+- type: listing
+  id: ChangelingExtractionString
+  name: changeling-ability-extraction-sting
+  description: changeling-ability-extraction-sting-desc
+  productAction: ActionExtractionSting
+  cost:
+    ChangelingPoint: 0
+  categories:
+  - ChangelingStings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: ChangelingTransformSting
+  name: changeling-ability-transform-sting
+  description: changeling-ability-transform-sting-desc
+  productAction: ActionTransformSting
+  cost:
+    ChangelingPoint: 3
+  categories:
+    - ChangelingStings
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+- type: listing
+  id: ChangelingBlindSting
+  name: changeling-ability-blind-sting
+  description: changeling-ability-blind-sting-desc
+  productAction: ActionBlindSting
+  cost:
+    ChangelingPoint: 1
+  categories:
+    - ChangelingStings
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+- type: listing
+  id: ChangelingMuteSting
+  name: changeling-ability-mute-sting
+  description: changeling-ability-mute-sting-desc
+  productAction: ActionMuteSting
+  cost:
+    ChangelingPoint: 2
+  categories:
+    - ChangelingStings
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+- type: listing
+  id: ChangelingHallucinationSting
+  name: changeling-ability-hallucination-sting
+  description: changeling-ability-hallucination-sting-desc
+  productAction: ActionHallucinationSting
+  cost:
+    ChangelingPoint: 1
+  categories:
+    - ChangelingStings
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+- type: listing
+  id: ChangelingCryogenicSting
+  name: changeling-ability-cryo-sting
+  description: changeling-ability-cryo-sting-desc
+  productAction: ActionCryoSting
+  cost:
+    ChangelingPoint: 2
+  categories:
+    - ChangelingStings
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+# Boosters
+- type: listing
+  id: ChangelingAdrenalineSacs
+  name: changeling-ability-adrenaline-sacks
+  description: changeling-ability-adrenaline-sacks-desc
+  productAction: ActionAdrenalineSacs
+  cost:
+    ChangelingPoint: 2
+  categories:
+    - ChangelingBoosters
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+- type: listing
+  id: ChangelingFleshmend
+  name: changeling-ability-fleshmend
+  description: changeling-ability-fleshmend-desc
+  productAction: ActionFleshmend
+  cost:
+    ChangelingPoint: 2
+  categories:
+    - ChangelingBoosters
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 1
+
+- type: listing
+  id: ChangelingBiodegrade
+  name: changeling-ability-biodegrade
+  description: changeling-ability-biodegrade-desc
+  productAction: ActionBiodegrade
+  cost:
+    ChangelingPoint: 2
+  categories:
+  - ChangelingBoosters
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: ChangelingAugmentedEyesight
+  name: changeling-ability-eyesight
+  description: changeling-ability-eyesight-desc
+  productAction: ActionAugmentedEyesight
+  components:
+    - FlashImmunity
+    - EyeProtection
+  cost:
+    ChangelingPoint: 2
+  categories:
+  - ChangelingBoosters
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: ChangelingDissonantShriek
+  name: changeling-ability-dissonant-shriek
+  description: changeling-ability-dissonant-shriek-desc
+  productAction: ActionDissonantShriek
+  cost:
+    ChangelingPoint: 1
+  categories:
+  - ChangelingBoosters
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1

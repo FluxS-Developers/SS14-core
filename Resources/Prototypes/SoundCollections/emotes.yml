@@ -1,0 +1,95 @@
+- type: soundCollection
+  id: MaleLaugh
+  files:
+    - /Audio/White/Voice/Human/Male/laugh2.ogg # WD
+    - /Audio/White/Voice/Human/Male/laugh3.ogg # WD
+    - /Audio/White/Voice/Human/Male/laugh4.ogg # WD
+    - /Audio/White/Voice/Human/Male/laugh5.ogg # WD
+
+- type: soundCollection
+  id: FemaleLaugh
+  files:
+    - /Audio/White/Voice/Human/Female/laugh1.ogg # WD
+    - /Audio/White/Voice/Human/Female/laugh2.ogg # WD
+    - /Audio/White/Voice/Human/Female/laugh3.ogg # WD
+
+- type: soundCollection
+  id: Claps
+  files:
+    - /Audio/Effects/Emotes/clap1.ogg
+    - /Audio/Effects/Emotes/clap2.ogg
+    - /Audio/Effects/Emotes/clap3.ogg
+    - /Audio/Effects/Emotes/clap4.ogg
+
+- type: soundCollection
+  id: Snaps
+  files:
+    - /Audio/Effects/Emotes/snap1.ogg
+    - /Audio/Effects/Emotes/snap2.ogg
+    - /Audio/Effects/Emotes/snap3.ogg
+
+- type: soundCollection
+  id: DionaLaugh
+  files:
+    - /Audio/Voice/Diona/diona_rustle1.ogg
+    - /Audio/Voice/Diona/diona_rustle2.ogg
+    - /Audio/Voice/Diona/diona_rustle3.ogg
+
+- type: soundCollection
+  id: MaleSigh
+  files:
+    - /Audio/Voice/Human/male_sigh.ogg
+
+- type: soundCollection
+  id: FemaleSigh
+  files:
+    - /Audio/Voice/Human/female_sigh.ogg
+
+- type: soundCollection
+  id: Salutes
+  files:
+    - /Audio/Effects/Emotes/salute.ogg
+
+- type: soundCollection
+  id: MaleCrying
+  files:
+    - /Audio/White/Voice/Human/Male/crying1.ogg # WD
+    - /Audio/White/Voice/Human/Male/crying2.ogg # WD
+    - /Audio/White/Voice/Human/Male/crying3.ogg # WD
+    - /Audio/White/Voice/Human/Male/crying4.ogg # WD
+    - /Audio/White/Voice/Human/Male/crying5.ogg # WD
+    - /Audio/White/Voice/Human/Male/crying6.ogg # WD
+
+- type: soundCollection
+  id: FemaleCrying
+  files:
+    - /Audio/White/Voice/Human/Female/crying1.ogg # WD
+    - /Audio/White/Voice/Human/Female/crying2.ogg # WD
+    - /Audio/White/Voice/Human/Female/crying3.ogg # WD
+    - /Audio/White/Voice/Human/Female/crying4.ogg # WD
+    - /Audio/White/Voice/Human/Female/crying5.ogg # WD
+    - /Audio/White/Voice/Human/Female/crying6.ogg # WD
+    - /Audio/White/Voice/Human/Female/crying7.ogg # WD
+    - /Audio/White/Voice/Human/Female/crying8.ogg # WD
+    - /Audio/White/Voice/Human/Female/crying9.ogg # WD
+    - /Audio/White/Voice/Human/Female/crying10.ogg # WD
+    - /Audio/White/Voice/Human/Female/crying11.ogg # WD
+    - /Audio/White/Voice/Human/Female/crying12.ogg # WD
+
+- type: soundCollection
+  id: Whistles
+  files:
+    - /Audio/Voice/Human/whistle_1.ogg
+    - /Audio/Voice/Human/whistle_2.ogg
+    - /Audio/Voice/Human/whistle_3.ogg
+    - /Audio/Voice/Human/whistle_4.ogg
+
+- type: soundCollection
+  id: Squishes
+  files:
+    - /Audio/Voice/Slime/slime_squish.ogg
+
+- type: soundCollection
+  id: Weh
+  files:
+  - /Audio/Items/Toys/weh.ogg

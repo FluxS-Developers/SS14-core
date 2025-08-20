@@ -1,0 +1,26 @@
+- type: job
+  id: StationEngineer
+  name: job-name-engineer
+  description: job-description-engineer
+  playTimeTracker: JobStationEngineer
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 14400 #4 hrs
+  icon: "JobIconStationEngineer"
+  supervisors: job-supervisors-ce
+  access:
+  - Maintenance
+  - Engineering
+  - External
+  extendedAccess:
+  - Atmospherics
+
+- type: startingGear
+  id: StationEngineerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitEngineering
+    back: ClothingBackpackEngineeringFilled
+    shoes: ClothingShoesBootsWork
+    id: EngineerPDA
+    ears: ClothingHeadsetEngineering

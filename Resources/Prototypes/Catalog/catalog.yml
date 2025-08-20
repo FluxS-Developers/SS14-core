@@ -1,0 +1,34 @@
+- type: listing
+  id: DebugListing
+  name: debug name
+  description: debug desc
+  categories:
+    - Debug
+  cost:
+    DebugDollar: 10
+    Telecrystal: 10
+
+- type: listing
+  id: DebugListing3
+  name: debug name 3
+  description: debug desc 3
+  categories:
+    - Debug
+  cost:
+    DebugDollar: 10
+
+- type: listing
+  id: DebugListing5
+  name: debug name 5
+  description: debug desc 5
+  categories:
+    - Debug
+
+- type: listing
+  id: DebugListing2
+  name: debug name 2
+  description: debug desc 2
+  categories:
+    - Debug2
+  cost:
+    DebugDollar: 10

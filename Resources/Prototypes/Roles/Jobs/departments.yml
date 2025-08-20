@@ -1,0 +1,142 @@
+- type: department
+  id: Command
+  name: department-Command
+  description: department-Command-description
+  color: "#334E6D"
+  weight: 200
+  roles:
+  - CentralCommandOfficial
+  - Captain
+  - HeadOfPersonnel
+  - HeadOfSecurity
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - ResearchDirector
+  - Quartermaster
+  - Inspector
+  - Maid
+  primary: false
+  buttonStyle: ButtonColorCommandDepartment
+
+- type: department
+  id: Security
+  name: department-Security
+  description: department-Security-description
+  color: "#DE3A3A"
+  weight: 180
+  roles:
+  - HeadOfSecurity
+  - Warden
+  - SeniorOfficer
+  - SecurityOfficer
+  - Detective
+  - Brigmedic
+  - SecurityCadet
+  buttonStyle: ButtonColorSecurityDepartment
+
+- type: department
+  id: Justice
+  name: department-Justice
+  description: department-Justice-description
+  weight: 160
+  color: "#710d00"
+  roles:
+  - Inspector
+  - Lawyer
+  buttonStyle: ButtonColorJusticeDepartment
+
+- type: department
+  id: Medical
+  name: department-Medical
+  description: department-Medical-description
+  color: "#52B4E9"
+  weight: 140
+  roles:
+  - ChiefMedicalOfficer
+  - SeniorPhysician
+  - MedicalDoctor
+  - Paramedic
+  - Chemist
+  - MedicalIntern
+  - Psychologist
+  buttonStyle: ButtonColorMedicalDepartment
+
+- type: department
+  id: Engineering
+  name: department-Engineering
+  description: department-Engineering-description
+  color: "#EFB341"
+  weight: 120
+  roles:
+  - ChiefEngineer
+  - SeniorEngineer
+  - AtmosphericTechnician
+  - StationEngineer
+  - TechnicalAssistant
+  buttonStyle: ButtonColorEngineeringDepartment
+
+- type: department
+  id: Science
+  name: department-Science
+  description: department-Science-description
+  color: "#D381C9"
+  weight: 100
+  roles:
+  - ResearchDirector
+  - SeniorResearcher
+  - Scientist
+  - ResearchAssistant
+  buttonStyle: ButtonColorScienceDepartment
+
+- type: department
+  id: Cargo
+  name: department-Cargo
+  description: department-Cargo-description
+  color: "#A46106"
+  weight: 80
+  roles:
+  - Quartermaster
+  - CargoTechnician
+  - SalvageSpecialist
+  buttonStyle: ButtonColorCargoDepartment
+
+- type: department
+  id: Civilian
+  name: department-Civilian
+  description: department-Civilian-description
+  color: "#9FED58"
+  weight: 60
+  roles:
+  - HeadOfPersonnel
+  - Borg
+  - Bartender
+  - Janitor
+  - Botanist
+  - Chaplain
+  - Chef
+  - Clown
+  - Mime
+  - Boxer
+  - ServiceWorker
+  - Librarian
+  - Musician
+  - Reporter
+  - Visitor
+  - Zookeeper
+  - Passenger
+  - Bomzh
+  buttonStyle: ButtonColorCivilianDepartment
+
+- type: department
+  id: Specific
+  name: department-Specific
+  description: department-Specific-description
+  color: "#9FED58"
+  weight: 0
+  roles:
+  - Boxer
+  - Reporter
+  - Zookeeper
+  - Psychologist
+  primary: false
+  buttonStyle: ButtonColorSpecificDepartment

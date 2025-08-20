@@ -1,0 +1,39 @@
+- type: entity
+  parent: BaseItem
+  id: BaseBlueprint
+  name: blueprint
+  description: A blueprint for some machine. It can be inserted into an autolathe.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/blueprint.rsi
+    state: icon
+  - type: Item
+    sprite: Objects/Tools/blueprint.rsi
+    size: Normal
+  - type: Blueprint
+  - type: StaticPrice
+    price: 1000
+  - type: Tag
+    tags:
+    - BlueprintAutolathe
+
+- type: entity
+  parent: BaseBlueprint
+  id: BlueprintFulton
+  name: fulton blueprint
+  description: A blueprint with a schematic of a fulton. It can be inserted into an autolathe.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - Fulton
+
+- type: entity
+  parent: BaseBlueprint
+  id: BlueprintMiningDrillDiamond # WD start
+  name: diamond mining drill blueprint
+  description: A blueprint with a schematic of a diamond mining drill. It can be inserted into an autolathe.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - MiningDrillDiamond # WD end

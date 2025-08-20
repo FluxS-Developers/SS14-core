@@ -1,0 +1,20 @@
+- type: vendingMachineInventory
+  id: AtmosDrobeInventory
+  startingInventory:
+    ClothingBackpackDuffelAtmospherics: 3
+    ClothingBackpackSatchelAtmospherics: 3
+    ClothingBackpackAtmospherics: 3
+    ClothingHeadHatBeretEngineering: 3
+    ClothingHeadsetEngineering: 3
+    ClothingNeckScarfStripedLightBlue: 3
+    ClothingMaskGasAtmos: 3
+    ClothingOuterWinterAtmos: 2
+    ClothingUniformJumpsuitAtmos: 3
+    ClothingUniformJumpskirtAtmos: 3
+    ClothingUniformJumpsuitAtmosCasual: 3
+    ClothingShoesColorWhite: 3
+    ClothingHeadHelmetFire: 2
+    ClothingOuterSuitFire: 2
+    ClothingOuterSuitAtmosFire: 1
+    ClothingHeadHelmetAtmosFire: 1
+    ClothingUniformJumpsuitRepairmanNT: 3

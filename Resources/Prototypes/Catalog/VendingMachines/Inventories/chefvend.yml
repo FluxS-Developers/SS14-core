@@ -1,0 +1,26 @@
+- type: vendingMachineInventory
+  id: ChefvendInventory
+  startingInventory:
+    ReagentContainerFlour: 2
+    ReagentContainerCornmeal: 2
+    ReagentContainerSugar: 2
+    ReagentContainerRice: 2
+    FoodCondimentPacketSalt: 4
+    FoodCondimentPacketPepper: 4
+    FoodCondimentBottleEnzyme: 2
+    FoodCondimentBottleHotsauce: 2
+    FoodCondimentBottleKetchup: 2
+    FoodCondimentBottleBBQ: 2
+    FoodCondimentBottleVinegar: 2
+    ReagentContainerOliveoil: 2
+    FoodContainerEgg: 2
+    DrinkMilkCarton: 3
+    DrinkSoyMilkCarton: 3
+    MonkeyCubeBox: 1
+    ReagentContainerMayo: 1
+    VariantCubeBox: 1
+    FoodButter: 4
+    FoodCheese: 1
+    FoodMeat: 6
+  emaggedInventory:
+    MaterialGunpowder60: 1 # For bomb cooking

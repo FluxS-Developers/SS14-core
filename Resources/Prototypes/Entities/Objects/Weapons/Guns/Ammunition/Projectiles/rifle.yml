@@ -1,0 +1,57 @@
+- type: entity
+  id: BulletRifle
+  name: bullet (0.20 rifle)
+  parent: [BaseBullet, BaseBulletTrail]
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 17
+
+- type: entity
+  id: BulletRiflePractice
+  name: bullet (0.20 rifle practice)
+  parent: [BaseBulletPractice, BaseBulletTrail]
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+
+- type: entity
+  id: BulletRifleRubber
+  name: bullet (0.20 rifle rubber)
+  parent: [BaseBulletRubber, BaseBulletTrail]
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+
+- type: entity
+  id: BulletRifleIncendiary
+  parent: [BaseBulletIncendiary, BaseBulletTrail]
+  name: bullet (0.20 rifle incendiary)
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+        Heat: 15
+
+- type: entity
+  id: BulletRifleUranium
+  parent: [BaseBulletUranium, BaseBulletTrail]
+  name: bullet (0.20 rifle uranium)
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 7
+        Piercing: 8
+

@@ -1,0 +1,8 @@
+- type: alert
+  id: Chemicals
+  icons:
+  - sprite: /Textures/Interface/Alerts/essence_counter.rsi
+    state: essence0
+  alertViewEntity: AlertEssenceSpriteView
+  name: alerts-changeling-chemicals-name
+  description: alerts-changeling-chemicals-desc

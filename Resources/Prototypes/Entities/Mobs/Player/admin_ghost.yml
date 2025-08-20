@@ -1,0 +1,197 @@
+- type: entity
+  parent: [MobObserver, ShowSecurityIcons]
+  id: AdminObserver
+  name: admin observer
+  noSpawn: true
+  components:
+  - type: ContentEye
+    maxZoom: 8.916104, 8.916104
+  - type: Tag
+    tags:
+    - InstantDoAfters
+    - CanPilot
+    - BypassInteractionRangeChecks
+    - BypassDropChecks
+    - SMImmune
+    - IgnoreBalanceChecks
+  - type: Input
+    context: "aghost"
+  - type: Ghost
+    canInteract: true
+  - type: GhostHearing
+  - type: Hands
+  - type: Puller
+  - type: CombatMode
+  - type: Physics
+    ignorePaused: true
+    bodyType: Kinematic
+  - type: Body
+    prototype: Aghost
+  - type: Access
+    groups:
+    - AllAccess
+    - Everything # WD
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
+    - CentralCommand
+  - type: UserInterface
+    interfaces:
+      enum.SolarControlConsoleUiKey.Key:
+        type: SolarControlConsoleBoundUserInterface
+      enum.CommunicationsConsoleUiKey.Key:
+        type: CommunicationsConsoleBoundUserInterface
+      enum.RadarConsoleUiKey.Key:
+        type: RadarConsoleBoundUserInterface
+      enum.CargoConsoleUiKey.Orders:
+        type: CargoOrderConsoleBoundUserInterface
+      enum.CrewMonitoringUIKey.Key:
+        type: CrewMonitoringBoundUserInterface
+      enum.GeneralStationRecordConsoleKey.Key:
+      # who the fuck named this bruh
+        type: GeneralStationRecordConsoleBoundUserInterface
+  - type: IntrinsicUI
+    uis:
+      enum.SolarControlConsoleUiKey.Key:
+        toggleAction: ActionAGhostShowSolar
+      enum.CommunicationsConsoleUiKey.Key:
+        toggleAction: ActionAGhostShowCommunications
+      enum.RadarConsoleUiKey.Key:
+        toggleAction: ActionAGhostShowRadar
+      enum.CargoConsoleUiKey.Orders:
+        toggleAction: ActionAGhostShowCargo
+      enum.CrewMonitoringUIKey.Key:
+        toggleAction: ActionAGhostShowCrewMonitoring
+      enum.GeneralStationRecordConsoleKey.Key:
+        toggleAction: ActionAGhostShowStationRecords
+  - type: SolarControlConsole # look ma i AM the computer!
+  - type: CommunicationsConsole
+    title: comms-console-announcement-title-centcom
+    color: "#228b22"
+  - type: RadarConsole
+    followEntity: true
+  - type: CargoOrderConsole
+  - type: CrewMonitoringConsole
+  - type: GeneralStationRecordConsole
+    canDeleteEntries: true
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: CrewMonitor
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: StationLimitedNetwork
+  - type: Thieving
+    stripTimeReduction: 9999
+    stealthy: true
+  - type: Stripping
+  - type: SolutionScanner
+  - type: IgnoreUIRange
+  - type: ShowRevIcons
+  - type: ShowZombieIcons
+  - type: ShowCultHud
+  - type: ShowDeadWithoutMind
+  - type: Inventory
+    templateId: aghost
+  - type: InventorySlots
+  - type: Loadout
+    prototypes: [ MobAghostGear ]
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+    - Inorganic
+  - type: Invisibility
+  - type: ThermalBlocker
+
+- type: entity
+  id: ActionAGhostShowSolar
+  name: action-name-show-solar-console
+  description: action-description-show-solar-console
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.SolarControlConsoleUiKey.Key }
+
+- type: entity
+  id: ActionAGhostShowCommunications
+  name: action-name-show-communications-console
+  description: action-description-show-communications-console
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.CommunicationsConsoleUiKey.Key }
+
+- type: entity
+  id: ActionAGhostShowRadar
+  name: action-name-show-radar-console
+  description: action-description-show-radar-console
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.RadarConsoleUiKey.Key }
+
+- type: entity
+  id: ActionAGhostShowCargo
+  name: action-name-show-cargo-console
+  description: action-description-show-cargo-console
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.CargoConsoleUiKey.Orders }
+
+- type: entity
+  id: ActionAGhostShowCrewMonitoring
+  name: action-name-show-crew-monitoring-console
+  description: action-description-crew-monitoring-console
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.CrewMonitoringUIKey.Key }
+
+- type: entity
+  id: ActionAGhostShowStationRecords
+  name: action-name-show-station-records-console
+  description: action-description-show-station-records-console
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.GeneralStationRecordConsoleKey.Key }
+
+- type: entity
+  id: ToggleInvisibilityAction
+  name: Переключить невидимость
+  description: Переключить невидимость вашего призрака.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: "White/Icons/transparent-ghost.png"
+    checkCanInteract: false
+    clientExclusive: true
+    priority: -5
+    event: !type:ToggleInvisibilityActionEvent

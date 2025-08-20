@@ -1,0 +1,145 @@
+- type: entity
+  id: AirlockGlassCult
+  parent: BaseMaterialDoor
+  name: runic airlock
+  description: Strange glass airlock with a rune.
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmash
+  - type: Sprite
+    sprite: White/Cult/Structures/cult_airlock.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: Physics
+    bodyType: Static
+  - type: Occluder
+    enabled: false
+  - type: Door
+    bumpOpen: true
+    occludes: false
+    crushDamage:
+      types:
+        Blunt: 15
+    openSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+    closeSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+  - type: Airtight
+    fixVacuum: true
+    noAirWhenFullyAirBlocked: false
+  - type: RadiationBlocker
+    resistance: 2
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: RunicDoor
+  - type: Construction
+    graph: AirlockGlassCult
+    node: airlock
+  - type: RCDDeconstructable
+    deconstructable: false
+  - type: PlacementReplacement
+    key: walls
+  - type: Appearance
+  - type: Concealable
+    examinableWhileConcealed: true
+    iconSmooth: true
+    interactionOutline: true
+    concealedSprite: White/Cult/Structures/Concealed/cult_airlock.rsi
+    revealedSprite: White/Cult/Structures/cult_airlock.rsi
+    changeMeta: true
+    concealedName: обычная стена
+    concealedDesc: Удерживает воздух внутри, а ассистентов снаружи.
+    revealedName: рунический шлюз
+    revealedDesc: Странный стеклянный шлюз с руной.
+  - type: IconSmooth
+    enabled: false
+    key: walls
+    mode: NoSprite
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  id: CultGirder
+  parent: BaseStructureDynamic
+  name: runic girder
+  description: A large structural assembly made out of metal. This one have a rune on it.
+  components:
+    - type: Transform
+      anchored: true
+      noRot: true
+    - type: Physics
+      bodyType: Static
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.45,-0.45,0.45,0.45"
+          density: 60
+          mask:
+            - MachineMask
+          layer:
+            - GlassAirlockLayer
+    - type: InteractionOutline
+    - type: Sprite
+      sprite: White/Cult/Structures/cult_girder.rsi
+      state: cultgirder
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: Metallic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 200
+          behaviors: #excess damage, don't spawn entities.
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+        - trigger:
+            !type:DamageTrigger
+            damage: 50
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                CultRunicMetal1:
+                  min: 1
+                  max: 1
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+    - type: StaticPrice
+      price: 10
+    - type: Construction
+      graph: CultGirder
+      node: girder
+    - type: Appearance
+    - type: Concealable
+      examinableWhileConcealed: true
+      concealedSprite: White/Cult/Structures/Concealed/cult_girder.rsi
+      revealedSprite: White/Cult/Structures/cult_girder.rsi
+      changeMeta: true
+      concealedName: каркас
+      concealedDesc: Большой металлический каркас; Необходимо покрыть листами металла, чтобы он считался стеной.
+      revealedName: руническая балка
+      revealedDesc: Большой конструктивный элемент, изготовленный из металла. На этом есть руна.
+
+- type: entity
+  id: WallForceCult
+  parent: WallForce
+  name: glowing wall
+  description: An unholy shield that blocks all attacks.
+  components:
+    - type: Sprite
+      sprite: White/Cult/Structures/cult_shield.rsi
+      state: icon
+    - type: Icon
+      sprite: White/Cult/Structures/cult_shield.rsi
+      state: icon

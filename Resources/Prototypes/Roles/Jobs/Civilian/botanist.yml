@@ -1,0 +1,23 @@
+- type: job
+  id: Botanist
+  name: job-name-botanist
+  description: job-description-botanist
+  playTimeTracker: JobBotanist
+  icon: "JobIconBotanist"
+  supervisors: job-supervisors-hop
+  access:
+  - Service
+  - Maintenance
+  - Hydroponics
+  extendedAccess:
+  - Kitchen
+  - Bar
+
+- type: startingGear
+  id: BotanistGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHydroponics
+    back: ClothingBackpackHydroponicsFilled
+    shoes: ClothingShoesColorBrown
+    id: BotanistPDA
+    ears: ClothingHeadsetService

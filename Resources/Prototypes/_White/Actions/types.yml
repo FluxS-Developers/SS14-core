@@ -1,0 +1,71 @@
+- type: entity
+  id: ActivateSmokeImplant
+  name: use-smoke-implant-action-name
+  description: use-smoke-implant-action-desc
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 40
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Objects/Weapons/Grenades/smoke.rsi
+      state: icon
+    event: !type:ActivateImplantEvent
+
+- type: entity
+  id: ActivateHardlightSpearImplant
+  name: use-hardlight-spear-implant-action-name
+  description: use-hardlight-spear-implant-action-description
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 1.5
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: White/Objects/Weapons/hardlight_spear.rsi
+      state: spear
+    event: !type:ActivateHardlightSpearImplantEvent
+
+- type: entity
+  id: ToggleNightVision
+  name: Toggle night vision.
+  description: Toggles night vision.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: White/Clothing/Eyes/Glasses/nightvision.rsi
+      state: icon
+    event: !type:ToggleNightVisionEvent
+
+- type: entity
+  id: ToggleThermalVision
+  name: Toggle thermal vision.
+  description: Toggles thermal vision.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: White/Clothing/Eyes/Glasses/thermal.rsi
+      state: icon
+    event: !type:ToggleThermalVisionEvent
+
+- type: entity
+  id: ToggleBodyCamera
+  name: Toggle body camera.
+  description: Toggles body camera.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Objects/Specific/Security/body-camera.rsi
+      state: unpowered
+    event: !type:ToggleBodyCameraEvent

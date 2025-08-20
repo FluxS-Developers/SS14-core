@@ -1,0 +1,44 @@
+- type: entity
+  id: BaseSign
+  name: base sign
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: WallMount
+    arc: 360
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Rotatable
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  # WD edit sounds start
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/smash.ogg"
+  # WD edit sounds end
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb {}
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: Structures/Wallmounts/signs.rsi
+    snapCardinals: true
+  - type: StaticPrice
+    price: 20

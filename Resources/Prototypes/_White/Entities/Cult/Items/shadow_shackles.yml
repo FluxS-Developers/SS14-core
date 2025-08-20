@@ -1,0 +1,11 @@
+- type: entity
+  name: shadow shackles
+  description: Shackles that bind the wrists with sinister magic.
+  id: ShadowShackles
+  parent: Handcuffs
+  components:
+  - type: Handcuff
+    color: black
+    breakOnRemove: true
+  - type: Sprite
+    color: black

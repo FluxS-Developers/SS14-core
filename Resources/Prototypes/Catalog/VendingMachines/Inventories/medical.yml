@@ -1,0 +1,20 @@
+- type: vendingMachineInventory
+  id: NanoMedPlusInventory
+  startingInventory:
+    HandheldHealthAnalyzer: 2
+    Brutepack: 2
+    Ointment: 2
+    Bloodpack: 2
+    Gauze: 2
+    Tourniquet: 5
+    EpinephrineChemistryBottle: 1
+    Syringe: 2
+    EmergencyMedipen: 2
+    SyringeBicaridine: 1
+    SyringeDermaline: 1
+    Eftpos: 2
+    Patch: 10
+    BrutePatch: 4
+    BurnPatch: 4
+  emaggedInventory:
+    StimpackMini: 1

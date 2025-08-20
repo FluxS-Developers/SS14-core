@@ -1,0 +1,76 @@
+- type: entity
+  name: trash bag
+  id: TrashBag
+  parent: BaseStorageItem
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/trashbag.rsi
+    layers:
+      - state: icon-0
+        map: ["enum.StorageFillLayers.Fill"]
+  - type: Storage
+    maxItemSize: Large
+    grid:
+    - 0,0,3,8
+    quickInsert: true
+    areaInsert: true
+    storageOpenSound:
+      collection: trashBagRustle
+    storageInsertSound:
+      collection: trashBagRustle
+  - type: Tag
+    tags:
+    - TrashBag
+    - DroneUsable
+  - type: Appearance
+  - type: StorageFillVisualizer
+    maxFillLevels: 4
+    fillBaseName: icon
+  - type: Dumpable
+  - type: Item
+    size: Huge
+
+- type: entity
+  name: trash bag
+  id: TrashBagBlue
+  parent: TrashBag
+  components:
+  - type: Sprite
+    layers:
+      - state: blue-icon-0
+        map: ["enum.StorageFillLayers.Fill"]
+  - type: Item
+    heldPrefix: blue
+  - type: StorageFillVisualizer
+    fillBaseName: blue-icon
+
+- type: entity # WD - for borgs
+  name: trash bag
+  id: TrashBagAdvanced
+  parent: TrashBagBlue
+  components:
+  - type: Storage
+    maxItemSize: Large
+    grid:
+    - 0,0,4,9
+    quickInsert: true
+    areaInsert: true
+    storageOpenSound:
+      collection: trashBagRustle
+    storageInsertSound:
+      collection: trashBagRustle
+  - type: Dumpable
+    multiplier: 1.3
+
+- type: entity
+  name: spell of all-consuming cleanliness
+  id: BagOfSummoningGarbage
+  parent: TrashBagBlue
+  components:
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,19,9
+    quickInsert: true
+    areaInsert: true
+    areaInsertRadius: 5

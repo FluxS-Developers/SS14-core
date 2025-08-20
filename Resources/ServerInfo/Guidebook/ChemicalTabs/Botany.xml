@@ -1,0 +1,10 @@
+<Document>
+
+# Ботанические
+
+Эти химикаты используются ботаниками. Некоторые из химикатов изменяют свойства растений.
+
+<GuideReagentGroupEmbed Group="Botanical"/>
+<GuideReagentEmbed Reagent="UnstableMutagen"/>
+
+</Document>

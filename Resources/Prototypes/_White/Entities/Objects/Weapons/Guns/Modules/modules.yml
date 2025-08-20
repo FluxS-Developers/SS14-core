@@ -1,0 +1,154 @@
+- type: entity
+  parent: BaseItem
+  id: BaseModule
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: White/Objects/Weapons/modules.rsi
+  - type: Item
+    sprite: White/Objects/Weapons/modules.rsi
+    size: Tiny
+  - type: Appearance
+  - type: GuideHelp
+    guides:
+    - WeaponModules
+
+- type: entity
+  parent: BaseModule
+  id: BaseHandGuardModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - BaseHandGuardModule
+
+- type: entity
+  parent: BaseModule
+  id: BaseBarrelModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - BaseBarrelModule
+
+- type: entity
+  parent: BaseModule
+  id: BaseAimModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - BaseAimModule
+
+- type: entity
+  parent: BaseModule
+  id: BaseShutterModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - BaseShutterModule
+
+# modules
+- type: entity
+  parent: BaseHandGuardModule
+  id: LightModule
+  name: "light module"
+  description: Light module for rifles (lecter, CV, drozd, WT).
+  components:
+  - type: LightModule
+    value: "light"
+    module_type: "handguard_module"
+  - type: Sprite
+    state: light
+
+- type: entity
+  parent: BaseHandGuardModule
+  id: LaserModule
+  name: "laser module"
+  description: Laser module for rifles (lecter, CV, drozd, WT).
+  components:
+  - type: LaserModule
+    value: "laser"
+    module_type: "handguard_module"
+  - type: Sprite
+    state: laser
+
+- type: entity
+  parent: BaseBarrelModule
+  id: FlameHiderModule
+  name: "flamehider module"
+  description: Flame Hider module for rifles (lecter, CV, drozd, WT).
+  components:
+  - type: FlameHiderModule
+    value: "flamehider"
+    module_type: "barrel_module"
+  - type: Sprite
+    state: flamehider
+
+- type: entity
+  parent: BaseBarrelModule
+  id: SilencerModule
+  name: "silencer module"
+  description: Silencer module for rifles (lecter, CV, drozd, WT).
+  components:
+  - type: SilencerModule
+    value: "silencer"
+    module_type: "barrel_module"
+  - type: Sprite
+    state: silencer
+
+- type: entity
+  parent: BaseHandGuardModule
+  id: AcceleratorModule
+  name: "accelerator module"
+  description: Accelerator module for rifles (lecter, CV, drozd, WT).
+  components:
+  - type: AcceleratorModule
+    value: "accelerator"
+    module_type: "handguard_module"
+  - type: Sprite
+    state: accelerator
+
+- type: entity
+  parent: BaseAimModule
+  id: HolographicSightModule
+  name: "holographic sight"
+  description: Holographic sight for rifles (lecter, CV, drozd, WT).
+  components:
+  - type: AimModule
+    value: "holographic"
+    module_type: "aim_module"
+  - type: Sprite
+    state: holographic
+  - type: Tag
+    tags:
+      - BaseAimModule
+      - HolographicAimModule
+
+- type: entity
+  parent: BaseAimModule
+  id: TelescopicSightModule
+  name: "telescopic sight"
+  description: Telescopic sight for rifles (lecter, CV, drozd, WT).
+  components:
+  - type: AimModule
+    divisor: 0.15
+    value: "telescopic"
+    module_type: "aim_module"
+  - type: Sprite
+    state: telescopic
+
+- type: entity
+  parent: BaseShutterModule
+  id: ShinanoShutterModule
+  name: "modified Shinano shutter"
+  description: An illegal modification for the TS430 Shinano made by one of the Syndicate's contractors. It allows the use of a wide range of grenade ammunition that are in service with the Syndicate.
+  components:
+  - type: ShutterModule
+    value: "shinano"
+    module_type: "shutter_module"
+    tag: Grenade
+  - type: Sprite
+    sprite: White/Objects/Weapons/modulesOnWeapon.rsi
+    state: telescopic

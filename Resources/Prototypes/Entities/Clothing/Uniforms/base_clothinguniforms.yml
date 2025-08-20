@@ -1,0 +1,97 @@
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: UnsensoredClothingUniformBase
+  components:
+  - type: Sprite
+    state: icon
+  - type: Clothing
+    slots: [innerclothing]
+    equipSound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 3
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 30
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+  - type: StaticPrice
+    price: 30
+  # WD edit sounds start
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/White/Items/handling/cloth_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/White/Items/handling/cloth_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/White/Items/handling/cloth_drop.ogg
+  # WD edit sounds end
+
+- type: entity
+  abstract: true
+  parent: UnsensoredClothingUniformBase
+  id: UnsensoredClothingUniformSkirtBase
+  components:
+  - type: Clothing
+    slots: [innerclothing]
+    femaleMask: UniformTop
+
+
+- type: entity
+  abstract: true
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformBase
+  components:
+  - type: SuitSensor
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    transmitFrequencyId: SuitSensor
+  - type: WirelessNetworkConnection
+    range: 1200
+  - type: StationLimitedNetwork
+
+- type: entity
+  abstract: true
+  parent: ClothingUniformBase
+  id: ClothingUniformSkirtBase
+  components:
+  - type: Clothing
+    slots: [innerclothing]
+    femaleMask: UniformTop
+
+# WD Start
+- type: entity
+  parent: [BaseFoldable]
+  id: ClothingUniformFoldableBase
+  abstract: true
+  components:
+  - type: Appearance
+  - type: Foldable
+    canFoldInsideContainer: true
+    unfoldVerbText: unfold-verb-clothing-jacket
+    foldVerbText: fold-verb-clothing-jacket
+  - type: FoldableClothing
+    foldedEquippedPrefix: folded
+    foldedHeldPrefix: folded
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon_folded
+      map: ["foldedLayer"]
+      visible: false
+# WD End

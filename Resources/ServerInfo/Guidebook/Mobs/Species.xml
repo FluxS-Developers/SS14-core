@@ -1,0 +1,23 @@
+<Document>
+  # Расы
+
+  НаноТрейзен нанимает разнообразные разумные виды.
+
+  <Box>
+  <GuideEntityEmbed Entity="MobHuman" Caption="Человек"/>
+  <GuideEntityEmbed Entity="MobReptilian" Caption="Унатх"/>
+  <GuideEntityEmbed Entity="MobSlimePerson" Caption="Слаймолюд"/>
+  </Box>
+  <Box>
+  <GuideEntityEmbed Entity="MobSkrell" Caption="Скрелл"/>
+  <GuideEntityEmbed Entity="MobMoth" Caption="Моль"/>
+  <GuideEntityEmbed Entity="MobArachnid" Caption="Арахнид"/>
+  <GuideEntityEmbed Entity="MobDiona" Caption="Диона"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="MobDwarf" Caption="Дворф"/>
+    <GuideEntityEmbed Entity="MobHarpy" Caption="Гарпия"/>
+    <GuideEntityEmbed Entity="MobFelinid" Caption="Фелинид"/>
+  </Box>
+
+</Document>

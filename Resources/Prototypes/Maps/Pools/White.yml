@@ -1,0 +1,18 @@
+- type: gameMapPool
+  id: WhiteMapPool
+  maps:
+  - Atom
+  - Bagel
+  - DryDock
+  - Marathon
+  - Meta
+  - Oasis
+  - Omega
+  - Origin
+  - Packed
+  - Polaris
+  - Reach
+  - Triumph
+  - WhiteBox
+  - WhiteMoose
+  - WonderBox

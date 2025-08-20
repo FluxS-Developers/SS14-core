@@ -1,0 +1,36 @@
+﻿- type: construction
+  name: revenant plushie
+  id: PlushieGhostRevenant
+  graph: PlushieGhostRevenant
+  startNode: start
+  targetNode: plushie
+  category: construction-category-misc
+  objectType: Item
+  description: A toy to scare the medbay with.
+  icon:
+    sprite: Mobs/Ghosts/revenant.rsi
+    state: icon
+
+- type: construction
+  name: ian suit
+  id: ClothingOuterSuitIan
+  graph: ClothingOuterSuitIan
+  startNode: start
+  targetNode: suit
+  category: construction-category-misc
+  objectType: Item
+  description: Make yourself look just like Ian!
+  icon:
+    sprite: Clothing/OuterClothing/Suits/iansuit.rsi
+    state: icon
+
+- type: construction
+  name: PoppyBouquet
+  id: PoppyBouquet
+  graph: PoppyBouquet
+  startNode: start
+  targetNode: PoppyBouquet
+  category: construction-category-misc
+  description: A bouquet of the best flowers that you could grow. At least you tried...
+  icon: { sprite: Objects/Misc/poppybouquet.rsi, state: icon }
+  objectType: Item

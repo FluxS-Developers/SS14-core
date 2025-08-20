@@ -1,0 +1,92 @@
+#Hunger
+- type: moodEffect
+  id: HungerOverfed
+  description: "Мой желудок полон!"
+  moodChange: enum.MoodChangeLevel.Medium
+  positive: true
+  category: "Hunger"
+
+- type: moodEffect
+  id: HungerOkay
+  description: "Мой желудок полон!"
+  moodChange: enum.MoodChangeLevel.Medium
+  positive: true
+  category: "Hunger"
+
+- type: moodEffect
+  id: HungerPeckish
+  description: "Хочу есть."
+  moodChange: enum.MoodChangeLevel.Medium
+  category: "Hunger"
+
+- type: moodEffect
+  id: HungerStarving
+  description: "Голодаю!"
+  moodChange: enum.MoodChangeLevel.Big
+  category: "Hunger"
+
+- type: moodEffect
+  id: HungerDead
+  description: "Умираю от голода!"
+  moodChange: enum.MoodChangeLevel.Huge
+  category: "Hunger"
+
+#Thirst
+- type: moodEffect
+  id: ThirstOverHydrated
+  description: "Не хочу пить."
+  moodChange: enum.MoodChangeLevel.Medium
+  positive: true
+  category: "Thirst"
+
+- type: moodEffect
+  id: ThirstOkay
+  description: "Не хочу пить."
+  moodChange: enum.MoodChangeLevel.Medium
+  positive: true
+  category: "Thirst"
+
+- type: moodEffect
+  id: ThirstThirsty
+  description: "Хочу пить."
+  moodChange: enum.MoodChangeLevel.Medium
+  category: "Thirst"
+
+- type: moodEffect
+  id: ThirstParched
+  description: "Хочу пить!"
+  moodChange: enum.MoodChangeLevel.Big
+  category: "Thirst"
+
+- type: moodEffect
+  id: ThirstDead
+  description: "Умираю от жажды!"
+  moodChange: enum.MoodChangeLevel.Huge
+  category: "Thirst"
+
+#Health
+- type: moodEffect
+  id: HealthNoDamage
+  description: "Чувствую себя лишённым боли."
+  moodChange: enum.MoodChangeLevel.None
+  positive: true
+  hidden: true
+  category: "Health"
+
+- type: moodEffect
+  id: HealthLightDamage
+  description: "Мои ссадины жгутся."
+  moodChange: enum.MoodChangeLevel.Small
+  category: "Health"
+
+- type: moodEffect
+  id: HealthSevereDamage
+  description: "Сильная боль пронзает меня."
+  moodChange: enum.MoodChangeLevel.Medium
+  category: "Health"
+
+- type: moodEffect
+  id: HealthHeavyDamage
+  description: "Агония гложет мою душу!"
+  moodChange: enum.MoodChangeLevel.Large
+  category: "Health"

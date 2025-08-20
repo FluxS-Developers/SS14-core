@@ -1,0 +1,149 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: PartBase
+  components:
+  - type: Sprite
+    sprite: Objects/Materials/parts.rsi
+    state: rods
+  - type: Item
+    sprite: Objects/Materials/parts.rsi
+  - type: Tag
+    tags:
+      - DroneUsable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: FlimsyMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: PartBase
+  id: PartRodMetal
+  name: metal rod
+  suffix: Full
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 50 #Half of a regular steel sheet to reflect the crafting recipe
+  - type: Tag
+    tags:
+    - CrossbowBolt
+  - type: Stack
+    stackType: MetalRod
+    baseLayer: base
+    layerStates:
+    - rods
+    - rods_2
+    - rods_3
+    - rods_4
+    - rods_5
+  - type: Sprite
+    state: rods_5
+    layers:
+    - state: rods_5
+      map: ["base"]
+  - type: Item
+    size: Small
+#    heldPrefix: rods
+  - type: Construction
+    graph: MetalRod
+    node: MetalRod
+  - type: Appearance
+  - type: FloorTile
+    outputs:
+    - Lattice
+    - FloorReinforced
+  - type: StaticPrice
+    price: 0
+  - type: StackPrice
+    price: 5
+  - type: Extractable
+    grindableSolutionName: rod
+  - type: SolutionContainerManager
+    solutions:
+      rod:
+        reagents:
+        - ReagentId: Iron
+          Quantity: 4.5
+        - ReagentId: Carbon
+          Quantity: 0.5
+  - type: RCDAmmo # WD
+    canBeExamined: false
+    chargeCountModifier: 0.5
+
+- type: entity
+  parent: PartRodMetal
+  id: PartRodMetal10
+  name: metal rod
+  suffix: 10
+  components:
+  - type: Tag
+    tags:
+    - RodMetal1
+    - CrossbowBolt
+    - DroneUsable
+  - type: Sprite
+    state: rods
+  - type: Stack
+    count: 10
+
+- type: entity
+  parent: PartRodMetal
+  id: PartRodMetal1
+  name: metal rod
+  suffix: Single
+  components:
+  - type: Tag
+    tags:
+    - RodMetal1
+    - DroneUsable
+    - CrossbowBolt
+  - type: Ammo
+    muzzleFlash: null
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 0
+  - type: Sprite
+    state: rods
+  - type: Stack
+    count: 1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+            - -0.20,-0.10
+            - -0.10,-0.20
+            - 0.40,0.30
+            - 0.30,0.40
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  parent: PartRodMetal
+  id: PartRodMetalLingering0
+  suffix: Lingering, 0
+  components:
+  - type: Stack
+    lingering: true
+    count: 0
+
+- type: entity
+  parent: FloorTileItemSteel
+  id: FloorTileItemSteelLingering0
+  suffix: Lingering, 0
+  components:
+  - type: Stack
+    lingering: true
+    count: 0

@@ -1,0 +1,39 @@
+- type: job
+  id: Detective
+  name: job-name-detective
+  description: job-description-detective
+  playTimeTracker: JobDetective
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 54000 # 15 hours
+  - !type:SpeciesRequirement
+    species:
+    - Human
+    - Dwarf
+    - Felinid
+  icon: "JobIconDetective"
+  supervisors: job-supervisors-hos
+  whitelistedSpecies:
+    - Human
+    - Dwarf
+    - Felinid
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - Maintenance
+  - Service
+  - Detective
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: DetectiveGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDetective
+    back: ClothingBackpackSecurityFilledDetective
+    shoes: ClothingShoesBootsCombatFilled
+    id: DetectivePDA
+    ears: ClothingHeadsetAltSecurity

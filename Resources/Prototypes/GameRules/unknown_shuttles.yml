@@ -1,0 +1,81 @@
+﻿- type: entity
+  id: UnknownShuttleCargoLost
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-unknown-shuttle-incoming
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 5
+    reoccurrenceDelay: 30
+    duration: 1
+    maxOccurrences: 1 # WD
+  - type: LoadMapRule
+    preloadedGrid: ShuttleCargoLost
+
+- type: entity
+  id: UnknownShuttleTravelingCuisine
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-unknown-shuttle-incoming
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 5
+    reoccurrenceDelay: 30
+    duration: 1
+    maxOccurrences: 1 # WD
+  - type: LoadMapRule
+    preloadedGrid: TravelingCuisine
+
+- type: entity
+  id: UnknownShuttleDisasterEvacPod
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-unknown-shuttle-incoming
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 5
+    reoccurrenceDelay: 30
+    duration: 1
+    maxOccurrences: 1 # WD
+  - type: LoadMapRule
+    preloadedGrid: DisasterEvacPod
+
+- type: entity
+  id: UnknownShuttleHonki
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-unknown-shuttle-incoming
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 2
+    reoccurrenceDelay: 30
+    duration: 1
+    maxOccurrences: 1 # WD
+  - type: LoadMapRule
+    preloadedGrid: Honki
+
+- type: entity
+  id: UnknownShuttleSyndieEvacPod
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-unknown-shuttle-incoming
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 2
+    reoccurrenceDelay: 30
+    duration: 1
+    maxOccurrences: 1 # WD
+    earliestStart: 40 # WD
+    minimumPlayers: 30 # WD
+  - type: LoadMapRule
+    preloadedGrid: SyndieEvacPod

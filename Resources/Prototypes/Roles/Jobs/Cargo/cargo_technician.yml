@@ -1,0 +1,22 @@
+- type: job
+  id: CargoTechnician
+  name: job-name-cargotech
+  description: job-description-cargotech
+  playTimeTracker: JobCargoTechnician
+  icon: "JobIconCargoTechnician"
+  supervisors: job-supervisors-qm
+  access:
+  - Cargo
+  - Maintenance
+  extendedAccess:
+  - Salvage
+
+- type: startingGear
+  id: CargoTechGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCargo
+    back: ClothingBackpackCargoFilled
+    shoes: ClothingShoesColorBlack
+    id: CargoPDA
+    ears: ClothingHeadsetCargo
+    pocket1: AppraisalTool

@@ -1,0 +1,308 @@
+# Loot table
+# Main loot table for random spawns
+- type: salvageLoot
+  id: SalvageLoot
+  loots:
+    - !type:RandomSpawnsLoot
+      entries:
+        - proto: AdvMopItem
+          prob: 0.5
+        - proto: AmmoTechFabCircuitboard
+          cost: 2
+        - proto: AutolatheMachineCircuitboard
+          cost: 2
+        - proto: BiomassReclaimerMachineCircuitboard
+          cost: 2
+        - proto: BluespaceBeaker
+          cost: 2
+        - proto: CyborgEndoskeleton
+          cost: 3
+          prob: 0.5
+        - proto: ChemDispenserMachineCircuitboard
+          cost: 2
+        - proto: CircuitImprinter
+          cost: 2
+        - proto: CloningConsoleComputerCircuitboard
+          cost: 2
+        - proto: CloningPodMachineCircuitboard
+          cost: 2
+        - proto: CognizineChemistryBottle
+        - proto: FoodBoxDonkpocketCarp
+          prob: 0.5
+        - proto: CrateSalvageEquipment
+          cost: 3
+          prob: 0.5
+        - proto: GasRecycler
+          cost: 2
+        - proto: GeneratorRTG
+          cost: 5
+        - proto: GravityGeneratorMini
+          cost: 2
+        - proto: GyroscopeUnanchored
+          cost: 2
+          prob: 0.1
+        - proto: MedicalScannerMachineCircuitboard
+          cost: 2
+        - proto: NuclearBombKeg
+          cost: 5
+        - proto: OmnizineChemistryBottle
+          prob: 0.5
+        - proto: PortableGeneratorPacman
+          cost: 2
+        - proto: PortableGeneratorSuperPacman
+          cost: 3
+        - proto: PowerCellAntiqueProto
+          cost: 5
+          prob: 0.5
+        - proto: ProtolatheMachineCircuitboard
+        - proto: RandomArtifactSpawner
+          cost: 2
+        - proto: RandomCargoCorpseSpawner
+          cost: 2
+          prob: 0.5
+        - proto: RandomCommandCorpseSpawner
+          cost: 5
+          prob: 0.5
+        - proto: RandomEngineerCorpseSpawner
+          cost: 2
+          prob: 0.5
+        - proto: RandomMedicCorpseSpawner
+          cost: 2
+          prob: 0.5
+        - proto: RandomScienceCorpseSpawner
+          cost: 2
+          prob: 0.5
+        - proto: RandomSecurityCorpseSpawner
+          cost: 2
+          prob: 0.5
+        - proto: RandomServiceCorpseSpawner
+          cost: 2
+          prob: 0.5
+        - proto: ResearchAndDevelopmentServerMachineCircuitboard
+          cost: 5
+          prob: 0.5
+        - proto: ResearchDisk10000
+          prob: 0.5
+        - proto: ResearchDisk5000
+          prob: 0.5
+        - proto: RipleyHarness
+          cost: 3
+          prob: 0.5
+        - proto: SpaceCash1000
+        - proto: SpaceCash10000
+          cost: 10
+        - proto: SpaceCash2500
+          cost: 3
+        - proto: SpaceCash5000
+          cost: 5
+        - proto: TechnologyDiskRare
+          cost: 5
+          prob: 0.5
+        - proto: ThrusterUnanchored
+        - proto: WaterTankHighCapacity
+        - proto: WeldingFuelTankHighCapacity
+          cost: 3
+        - proto: WeaponTeslaGun
+          prob: 0.1
+          cost: 2
+        - proto: EnergyBattleAxe
+          prob: 0.1
+          cost: 20
+        - proto: WeaponRifleAk
+          cost: 16
+        - proto: TimeBeacon
+          cost: 2
+          prob: 0.5
+        - proto: ClothingBackpackDuffelSyndicateFilledSMG
+          cost: 15
+          prob: 0.2
+        - proto: ClothingBackpackDuffelSyndicateFilledShotgun
+          cost: 17
+          prob: 0.2
+        - proto: BriefcaseSyndieSniperBundleFilled
+          cost: 20
+          prob: 0.2
+        - proto: ClothingBackpackDuffelSyndicateFilledLMG
+          cost: 25
+          prob: 0.2
+        - proto: WeaponRevolverMateba
+          cost: 10
+          prob: 0.1
+        - proto: WeaponRevolverDeckard
+          cost: 10
+        - proto: ExGrenade
+          cost: 8
+        - proto: SupermatterGrenade
+          cost: 12
+        - proto: WhiteholeGrenade
+          cost: 5
+        - proto: ClothingOuterHardsuitMaxim
+          cost: 12
+        - proto: GrenadeIncendiary
+          cost: 8
+        - proto: ExperimentalSyndicateTeleporter
+          cost: 8
+          prob: 0.2
+        - proto: ClothingHeadHelmetSwat
+          cost: 4
+          prob: 0.5
+        - proto: ClothingBeltMilitaryWebbing
+          cost: 2
+        - proto: ClothingOuterVestWeb
+          cost: 5
+          prob: 0.5
+        - proto: ClothingEyesNightVisionGoggles
+          cost: 8
+        - proto: ClothingEyesGlassesThermal
+          cost: 8
+        - proto: ClothingHandsGlovesCombat
+          cost: 3
+        - proto: Katana
+          cost: 5
+        - proto: WeaponMakeshiftLaser
+          cost: 10
+          prob: 0.5
+        - proto: WeaponLaserGun
+          cost: 12
+          prob: 0.1
+        - proto: WeaponEgun
+          cost: 16
+          prob: 0.1
+        - proto: WeaponXrayCannon
+          cost: 18
+          prob: 0.1
+        - proto: WeaponLaserCannon
+          cost: 20
+          prob: 0.1
+        - proto: Stimpack
+          cost: 8
+          prob: 0.5
+        - proto: StimkitFilled
+          cost: 12
+          prob: 0.5
+        - proto: CrateSecurityRiot
+          cost: 12
+          prob: 0.5
+        - proto: CrateSecurityNonlethal
+          cost: 10
+          prob: 0.5
+        - proto: ClothingShoesBootsMagSyndie
+          cost: 4
+          prob: 0.2
+        - proto: JetpackBlackFilled
+          cost: 3
+          prob: 0.5
+        - proto: WeaponLauncherRocket
+          cost: 20
+        - proto: WeaponLauncherPirateCannon
+          cost: 15
+        - proto: LightModule
+          cost: 3
+        - proto: LaserModule
+          cost: 8
+        - proto: HolographicSightModule
+          cost: 8
+        - proto: FlameHiderModule
+          cost: 3
+        - proto: SilencerModule
+          cost: 5
+        - proto: AcceleratorModule
+          cost: 12
+        - proto: TelescopicSightModule
+          cost: 12
+        - proto: MedkitFilled
+          cost: 3
+        - proto: MedkitRadiationFilled
+          cost: 5
+        - proto: MedkitOxygenFilled
+          cost: 3
+        - proto: MedkitBruteFilled
+          cost: 5
+        - proto: MedkitCombatFilled
+          cost: 10
+        - proto: MedkitToxinFilled
+          cost: 5
+        - proto: MedkitBurnFilled
+          cost: 5
+        - proto: MedkitAdvancedFilled
+          cost: 8
+
+
+# Mob loot table
+
+
+# Boss loot table
+
+# Ores - these are guaranteed
+# - Low value
+- type: salvageLoot
+  id: OreIron
+  guaranteed: true
+  loots:
+    - !type:BiomeMarkerLoot
+      proto: OreIron
+
+- type: salvageLoot
+  id: OreCoal
+  guaranteed: true
+  loots:
+    - !type:BiomeMarkerLoot
+      proto: OreCoal
+
+- type: salvageLoot
+  id: OreQuartz
+  guaranteed: true
+  loots:
+    - !type:BiomeMarkerLoot
+      proto: OreQuartz
+
+- type: salvageLoot
+  id: OreSalt
+  guaranteed: true
+  loots:
+    - !type:BiomeMarkerLoot
+      proto: OreSalt
+
+# - Medium value
+- type: salvageLoot
+  id: OreGold
+  guaranteed: true
+  loots:
+    - !type:BiomeMarkerLoot
+      proto: OreGold
+
+- type: salvageLoot
+  id: OreSilver
+  guaranteed: true
+  loots:
+    - !type:BiomeMarkerLoot
+      proto: OreSilver
+
+# - High value
+- type: salvageLoot
+  id: OrePlasma
+  guaranteed: true
+  loots:
+    - !type:BiomeMarkerLoot
+      proto: OrePlasma
+
+- type: salvageLoot
+  id: OreUranium
+  guaranteed: true
+  loots:
+    - !type:BiomeMarkerLoot
+      proto: OreUranium
+
+- type: salvageLoot
+  id: OreBananium
+  guaranteed: true
+  loots:
+    - !type:BiomeMarkerLoot
+      proto: OreBananium
+
+- type: salvageLoot
+  id: OreArtifactFragment
+  guaranteed: true
+  loots:
+    - !type:BiomeMarkerLoot
+      proto: OreArtifactFragment

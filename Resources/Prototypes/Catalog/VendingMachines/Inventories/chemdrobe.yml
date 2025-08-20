@@ -1,0 +1,16 @@
+- type: vendingMachineInventory
+  id: ChemDrobeInventory
+  startingInventory:
+    ClothingBackpackChemistry: 3
+    ClothingBackpackSatchelChemistry: 3
+    ClothingBackpackDuffelChemistry: 3
+    ClothingHeadHatBeretBrigmedic: 3
+    ClothingHeadsetMedical: 3
+    ClothingOuterWinterChem: 3
+    ClothingOuterCoatLabChem: 3
+    ClothingUniformJumpsuitChemistry: 3
+    ClothingUniformJumpskirtChemistry: 3
+    ClothingHandsGlovesLatex: 3
+    ChemBag: 3
+    ClothingBeltMedical: 3
+    ClothingShoesColorWhite: 3
