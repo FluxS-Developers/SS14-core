@@ -1,4 +1,7 @@
-﻿using Content.Shared.Movement.Pulling.Systems;
+﻿using Content.Shared._Parsec14.Pulling; // WD edit
+using Content.Shared.Damage;
+using Content.Shared.FixedPoint;
+using Content.Shared.Movement.Pulling.Systems;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
@@ -8,7 +11,7 @@ namespace Content.Shared.Movement.Pulling.Components;
 /// Specifies an entity as being able to pull another entity with <see cref="PullableComponent"/>
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(PullingSystem))]
+[Access(typeof(PullingSystem), typeof(SharedParsecPullingSystem))] // WD edit
 public sealed partial class PullerComponent : Component
 {
     // My raiding guild
@@ -38,4 +41,62 @@ public sealed partial class PullerComponent : Component
     /// </summary>
     [DataField]
     public bool NeedsHands = true;
+
+    // WD edit start
+    /// <summary>
+    /// what types of capture are available to the entity
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public HashSet<PullingState> AllowedStates = new()
+    {
+        PullingState.None,
+        PullingState.Grab,
+        PullingState.Hold,
+        PullingState.Hurt,
+        PullingState.Kill,
+    };
+
+    /// <summary>
+    /// what type of capture does the entity have now
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public PullingState State;
+
+    /// <summary>
+    /// delay before changing capture type
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public TimeSpan NextPullCooldown = TimeSpan.FromSeconds(2.5);
+
+    /// <summary>
+    /// time from which can you change the grip
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public TimeSpan NextPullAt;
+
+    /// <summary>
+    /// stun time in Hurt state
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public TimeSpan StunTime = TimeSpan.FromSeconds(1.5);
+
+    /// <summary>
+    /// stamina damage in Hold state
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public float StaminaDamage = 30f;
+
+    /// <summary>
+    /// damage in Kill state
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public DamageSpecifier Damage = new DamageSpecifier
+    {
+        DamageDict = new Dictionary<string, FixedPoint2>
+        {
+            { "Asphyxiation", 10 },
+            { "Blunt", 5 }
+        }
+    };
+    // WD edit end
 }

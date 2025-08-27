@@ -1,3 +1,4 @@
+using Content.Shared._Parsec14.Pulling; // WD edit
 using Robust.Shared.GameStates;
 
 namespace Content.Shared.Movement.Pulling.Components;
@@ -6,7 +7,7 @@ namespace Content.Shared.Movement.Pulling.Components;
 /// Specifies an entity as being pullable by an entity with <see cref="PullerComponent"/>
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(Systems.PullingSystem))]
+[Access(typeof(Systems.PullingSystem), typeof(SharedParsecPullingSystem))] // WD edit
 public sealed partial class PullableComponent : Component
 {
     /// <summary>
@@ -36,4 +37,28 @@ public sealed partial class PullableComponent : Component
     [Access(typeof(Systems.PullingSystem), Other = AccessPermissions.ReadExecute)]
     [AutoNetworkedField, DataField]
     public bool PrevFixedRotation;
+
+    // WD edit start
+    /// <summary>
+    /// what types of captures can an entity be in
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public HashSet<PullingState> AllowedStates = new()
+    {
+        PullingState.None,
+        PullingState.Grab,
+    };
+
+    /// <summary>
+    /// what type of capture is the entity currently in
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public PullingState State;
+
+    /// <summary>
+    /// is breathing blocked
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool BlockedBreathing = false;
+    // WD edit end
 }

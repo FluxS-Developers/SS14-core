@@ -37,3 +37,67 @@
       drawdepth: Effects
     - type: PointLight
       color: "#008DFE"
+      
+- type: entity
+  id: GrabPullingEffect
+  components:
+    - type: TimedDespawn
+      lifetime: 0.2
+    - type: EvaporationSparkle
+    - type: Transform
+      noRot: true
+    - type: Sprite
+      layers:
+        - sprite: White/Effects/pulling_effects.rsi
+          state: grab
+          shader: unshaded
+      netsync: false
+      drawdepth: Effects
+      
+- type: entity
+  id: HoldPullingEffect
+  components:
+    - type: TimedDespawn
+      lifetime: 0.2
+    - type: EvaporationSparkle
+    - type: Transform
+      noRot: true
+    - type: Sprite
+      layers:
+        - sprite: White/Effects/pulling_effects.rsi
+          state: hold
+          shader: unshaded
+      netsync: false
+      drawdepth: Effects
+      
+- type: entity
+  id: HurtPullingEffect
+  components:
+    - type: TimedDespawn
+      lifetime: 0.2
+    - type: EvaporationSparkle
+    - type: Transform
+      noRot: true
+    - type: Sprite
+      layers:
+        - sprite: White/Effects/pulling_effects.rsi
+          state: hurt
+          shader: unshaded
+      netsync: false
+      drawdepth: Effects
+      
+- type: entity
+  id: KillPullingEffect
+  components:
+    - type: TimedDespawn
+      lifetime: 0.2
+    - type: EvaporationSparkle
+    - type: Transform
+      noRot: true
+    - type: Sprite
+      layers:
+        - sprite: White/Effects/pulling_effects.rsi
+          state: kill
+          shader: unshaded
+      netsync: false
+      drawdepth: Effects

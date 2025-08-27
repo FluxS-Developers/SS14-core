@@ -86,6 +86,9 @@ namespace Content.Server.Body.Components
         public EntityUid? CPRPlayingStream;
 
         public EntityUid? CPRPerformedBy = null;
+
+        [DataField]
+        public bool Breathing = true;
         // WD end
     }
 }

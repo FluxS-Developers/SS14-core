@@ -27,6 +27,7 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
+using Content.Shared._Parsec14.Pulling;// WD edit
 
 namespace Content.Shared.Movement.Pulling.Systems;
 
@@ -46,6 +47,7 @@ public sealed class PullingSystem : EntitySystem
     [Dependency] private readonly SharedInteractionSystem _interaction = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly SharedStandingStateSystem _standing = default!;
+    [Dependency] private readonly SharedParsecPullingSystem _parsecPulling = default!; // WD edit
 
     public override void Initialize()
     {
@@ -230,6 +232,7 @@ public sealed class PullingSystem : EntitySystem
         {
             var pullerUid = oldPuller.Value;
             _alertsSystem.ClearAlert(pullerUid, AlertType.Pulling);
+            _parsecPulling.TryChangePullingState(pullerUid, pullableUid, PullingState.None); // WD edit
             pullerComp.Pulling = null;
             Dirty(oldPuller.Value, pullerComp);
 
@@ -444,6 +447,7 @@ public sealed class PullingSystem : EntitySystem
         var message = new PullStartedMessage(pullerUid, pullableUid);
         _alertsSystem.ShowAlert(pullerUid, AlertType.Pulling);
         _alertsSystem.ShowAlert(pullableUid, AlertType.Pulled);
+        _parsecPulling.TryChangePullingState(pullerUid, pullableUid, PullingState.Grab); // WD edit
 
         RaiseLocalEvent(pullerUid, message);
         RaiseLocalEvent(pullableUid, message);

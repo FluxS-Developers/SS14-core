@@ -94,7 +94,7 @@ public sealed class RespiratorSystem : EntitySystem
 
             UpdateSaturation(uid, -(float) respirator.UpdateInterval.TotalSeconds, respirator);
 
-            if (!_mobState.IsIncapacitated(uid)) // cannot breathe in crit.
+            if (!_mobState.IsIncapacitated(uid) && respirator.Breathing) // cannot breathe in crit. // WD edit
             {
                 switch (respirator.Status)
                 {
@@ -403,6 +403,23 @@ public sealed class RespiratorSystem : EntitySystem
         }
 
         RaiseLocalEvent(args.User, new MoodEffectEvent("SavedLife"));
+    }
+
+    public void ChangeBreathing(Entity<RespiratorComponent> ent, bool changed)
+    {
+        ent.Comp.Breathing = changed;
+    }
+
+    public bool TryChangeBreathing(Entity<RespiratorComponent?> ent, bool changed)
+    {
+        if (!Resolve(ent, ref ent.Comp))
+            return false;
+
+        if (ent.Comp.Breathing == changed)
+            return false;
+
+        ChangeBreathing((ent, ent.Comp), changed);
+        return true;
     }
     //WD end
 }
