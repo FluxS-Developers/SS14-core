@@ -405,11 +405,22 @@ public sealed class RespiratorSystem : EntitySystem
         RaiseLocalEvent(args.User, new MoodEffectEvent("SavedLife"));
     }
 
+    /// <summary>
+    /// forcibly switches the ability to breathe in the entity
+    /// </summary>
+    /// <param name="ent"></param>
+    /// <param name="changed"></param>
     public void ChangeBreathing(Entity<RespiratorComponent> ent, bool changed)
     {
         ent.Comp.Breathing = changed;
     }
 
+    /// <summary>
+    /// allows you to try to switch the breathing of the entity
+    /// </summary>
+    /// <param name="ent"></param>
+    /// <param name="changed"></param>
+    /// <returns>true if breathing success changed</returns>
     public bool TryChangeBreathing(Entity<RespiratorComponent?> ent, bool changed)
     {
         if (!Resolve(ent, ref ent.Comp))

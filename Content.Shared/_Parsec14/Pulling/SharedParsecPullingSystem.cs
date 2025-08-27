@@ -109,6 +109,12 @@ public abstract class SharedParsecPullingSystem : EntitySystem
         }
     }
 
+    /// <summary>
+    /// receives the entity pulled by the puller
+    /// </summary>
+    /// <param name="puller"></param>
+    /// <param name="pullable"></param>
+    /// <returns>rtue if pullable HasValue</returns>
     public bool TryGetPullable(Entity<PullerComponent?> puller, [NotNullWhen(true)] out EntityUid? pullable)
     {
         pullable = default!;
@@ -119,6 +125,12 @@ public abstract class SharedParsecPullingSystem : EntitySystem
         return pullable.HasValue;
     }
 
+    /// <summary>
+    /// gets the entity that pulls pullable
+    /// </summary>
+    /// <param name="pullable"></param>
+    /// <param name="puller"></param>
+    /// <returns>true if puller HasValue</returns>
     public bool TryGetPuller(Entity<PullableComponent?> pullable, [NotNullWhen(true)] out EntityUid? puller)
     {
         puller = default!;
@@ -129,6 +141,12 @@ public abstract class SharedParsecPullingSystem : EntitySystem
         return puller.HasValue;
     }
 
+    /// <summary>
+    /// forcibly changes the capture types of both entities
+    /// </summary>
+    /// <param name="puller"></param>
+    /// <param name="pullable"></param>
+    /// <param name="state"></param>
     public void ChangePullingState(Entity<PullerComponent> puller, Entity<PullableComponent> pullable, PullingState state)
     {
         puller.Comp.NextPullAt = _timing.CurTime + puller.Comp.NextPullCooldown;
@@ -141,6 +159,13 @@ public abstract class SharedParsecPullingSystem : EntitySystem
         RaiseLocalEvent(pullable, ref pullableEv);
     }
 
+    /// <summary>
+    /// allows you to find out whether entities can mutually change the capture type
+    /// </summary>
+    /// <param name="puller"></param>
+    /// <param name="pullable"></param>
+    /// <param name="state"></param>
+    /// <returns>true if comp HasValue</returns>
     public bool CanGrabInState(Entity<PullerComponent?> puller, Entity<PullableComponent?> pullable, PullingState state)
     {
         if (!Resolve(puller, ref puller.Comp))
@@ -153,6 +178,13 @@ public abstract class SharedParsecPullingSystem : EntitySystem
             pullable.Comp.AllowedStates.Contains(state);
     }
 
+    /// <summary>
+    /// allows you to try to change the capture type of entities
+    /// </summary>
+    /// <param name="puller"></param>
+    /// <param name="pullable"></param>
+    /// <param name="state"></param>
+    /// <returns>true if pulling state success changed</returns>
     public bool TryChangePullingState(Entity<PullerComponent?> puller, Entity<PullableComponent?> pullable, PullingState state)
     {
         if (puller.Owner == pullable.Owner)
